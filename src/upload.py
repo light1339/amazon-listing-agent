@@ -1,10 +1,11 @@
 """上传文件解析（内存中完成，不落盘）。支持 .json（同 mock_data.json）、.csv、.xlsx（扁平表，见 COLUMNS）。"""
 import csv,io,json,re,zipfile
 MAX_BYTES=2*1024*1024; MAX_PRODUCTS=50; MAX_COMPS=20; MAX_STR=500
-COLUMNS=["asin","name","noun","category","price","features","keywords","comp_rank","comp_asin","comp_title","comp_price","comp_rating","comp_reviews","comp_bullets"]
+COLUMNS=["asin","name","noun","category","price","features","keywords","comp_rank","comp_asin","comp_brand","comp_title","comp_price","comp_rating","comp_reviews","comp_bullets"]
 HELP={"asin":"商品 ASIN（必填，4–20 位字母数字）","name":"商品中文名","noun":"英文品名（必填）","category":"类目","price":"售价（数字）",
  "features":"卖点，| 分隔，至少 3 个","keywords":"关键词:搜索量:排名，| 分隔，排名可空，如 travel mug:48000:23|thermos cup:33000:",
- "comp_rank":"竞品排名（整数）","comp_asin":"竞品 ASIN","comp_title":"竞品标题","comp_price":"竞品价格","comp_rating":"竞品评分 0–5","comp_reviews":"竞品评论数（整数）","comp_bullets":"竞品五点，| 分隔"}
+ "comp_rank":"竞品排名（整数）","comp_asin":"竞品 ASIN","comp_brand":"竞品品牌（可选，如 Trevalo；页面显示为 品牌+品类；旧文件无此列也可上传）","comp_title":"竞品标题","comp_price":"竞品价格","comp_rating":"竞品评分 0–5","comp_reviews":"竞品评论数（整数）","comp_bullets":"竞品五点，| 分隔"}
+OPTIONAL={"comp_brand"}
 class Bad(Exception): pass
 ID=re.compile(r"^[A-Za-z0-9]{4,20}$")
 def _s(v,f,req=True):
@@ -38,7 +39,7 @@ def _norm(p,where):
             if not isinstance(c,dict): raise Bad("competitors 项应为对象")
             ca=_s(c.get("asin"),"comp_asin")
             if not ID.match(ca): raise Bad(f"comp_asin 格式不正确：{ca[:20]}")
-            comps.append({"rank":_n(c.get("rank"),"comp_rank",int,1,1e6),"asin":ca,"title":_s(c.get("title"),"comp_title"),
+            comps.append({"rank":_n(c.get("rank"),"comp_rank",int,1,1e6),"asin":ca,"brand":_s(c.get("brand"),"comp_brand",False),"title":_s(c.get("title"),"comp_title"),
                 "bullets":[_s(b,"comp_bullets 项") for b in (c.get("bullets") or []) if str(b).strip()][:10],
                 "price":_n(c.get("price"),"comp_price",float,0,1e6),"rating":_n(c.get("rating"),"comp_rating",float,0,5),"reviews":_n(c.get("reviews"),"comp_reviews",int,0,1e9)})
         if not comps: raise Bad("至少需要 1 个竞品")
@@ -51,9 +52,9 @@ def _split(v): return [x.strip() for x in str(v or "").split("|") if x.strip()]
 def _rows_to_products(rows):
     if not rows: raise Bad("文件没有数据行")
     head=[str(h or "").strip().lower() for h in rows[0]]
-    miss=[c for c in COLUMNS if c not in head]
+    miss=[c for c in COLUMNS if c not in head and c not in OPTIONAL]
     if miss: raise Bad("缺少列："+", ".join(miss)+"（请下载模板对照表头）")
-    idx={c:head.index(c) for c in COLUMNS}; prods={}; order=[]
+    idx={c:(head.index(c) if c in head else 10**6) for c in COLUMNS}; prods={}; order=[]
     for n,r in enumerate(rows[1:],start=2):
         g=lambda c:(r[idx[c]] if idx[c]<len(r) else None)
         if all(x is None or str(x).strip()=="" for x in r): continue
@@ -70,7 +71,7 @@ def _rows_to_products(rows):
             order.append(a)
         if str(g("comp_asin") or "").strip():
             if len(prods[a]["competitors"])>=MAX_COMPS: raise Bad(f"第 {n} 行：商品 {a} 竞品超过 {MAX_COMPS} 个")
-            prods[a]["competitors"].append({"rank":g("comp_rank"),"asin":g("comp_asin"),"title":g("comp_title"),"price":g("comp_price"),
+            prods[a]["competitors"].append({"rank":g("comp_rank"),"asin":g("comp_asin"),"brand":g("comp_brand"),"title":g("comp_title"),"price":g("comp_price"),
                 "rating":g("comp_rating"),"reviews":g("comp_reviews"),"bullets":_split(g("comp_bullets"))})
     return [_norm(prods[a],f"第 {prods[a]['_row']} 行（{a}）") for a in order]
 def _xlsx_rows(b):
@@ -117,7 +118,7 @@ def flat_rows(products):
         kw="|".join(f'{k["keyword"]}:{k["search_volume"] if k["search_volume"] is not None else ""}:{k["rank"] if k["rank"] is not None else ""}' for k in p["keywords"])
         for i,c in enumerate(p["competitors"]):
             base=[p["asin"],p["name"],p["noun"],p["category"],p["price"],"|".join(p["features"]),kw] if i==0 else [p["asin"]]+[""]*6
-            rows.append(base+[c["rank"],c["asin"],c["title"],c["price"],c["rating"],c["reviews"],"|".join(c["bullets"])])
+            rows.append(base+[c["rank"],c["asin"],c.get("brand",""),c["title"],c["price"],c["rating"],c["reviews"],"|".join(c["bullets"])])
     return rows
 def template(fmt,products):
     if fmt=="json": return json.dumps({"products":products},ensure_ascii=False,indent=1).encode(),"application/json; charset=utf-8"
@@ -129,5 +130,5 @@ def template(fmt,products):
     for r in rows: ws.append(r)
     h=wb.create_sheet("说明"); h.append(["列名","说明"])
     for c in COLUMNS: h.append([c,HELP[c]])
-    h.append(["",""]); h.append(["规则","同一商品多行=多个竞品；商品字段只需在该商品第一行填写；只读取第一个工作表"])
+    h.append(["",""]); h.append(["规则","同一商品多行=多个竞品；商品字段只需在该商品第一行填写；只读取第一个工作表；竞品行的 name 留空（name 只代表我方商品），竞品品牌写在 comp_brand"])
     s=io.BytesIO(); wb.save(s); return s.getvalue(),"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"

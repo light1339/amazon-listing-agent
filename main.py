@@ -6,7 +6,14 @@ from src.generate import generate,chain
 from src.export import export
 from src.validate import validate
 from src import db,upload,images
-import secrets,uuid
+import secrets,uuid,re,unicodedata
+Q_MAX=80
+NO_COMP="无竞品数据，请上传文件获得竞品分析"
+def brief(p): return {"asin":p["asin"],"name":p["name"],"noun":str(p.get("noun") or "")[:120],"keywords":[str(k.get("keyword",""))[:60] for k in (p.get("keywords") or [])[:12] if isinstance(k,dict)]}
+def clean_q(x):
+    if not isinstance(x,str): return None
+    x="".join(c for c in x if not unicodedata.category(c).startswith("C"))
+    return re.sub(r"\s+"," ",x).strip()
 ROOT=os.path.dirname(os.path.abspath(__file__))
 MAX_BODY=16384
 GEN_LIMIT=int(os.environ.get("DAILY_GEN_LIMIT","100")); IMG_LIMIT=int(os.environ.get("DAILY_IMAGE_LIMIT","100")); IMG_PER=2
@@ -52,7 +59,7 @@ class H(BaseHTTPRequestHandler):
         u=urllib.parse.urlparse(self.path); path=u.path.rstrip("/").split("/")[-1] if u.path not in("/","") else ""
         if path in("","index.html"): return self._send(200,open(os.path.join(ROOT,"static","index.html"),"rb").read(),"text/html; charset=utf-8")
         if path=="products":
-            d=data(); return self._send(200,{"note":d["_note"],"datasets":d["datasets"],"products":[{"asin":p["asin"],"name":p["name"]} for p in d["products"]]})
+            d=data(); return self._send(200,{"note":d["_note"],"datasets":d["datasets"],"products":[brief(p) for p in d["products"]]})
         if path=="models":
             av={x["name"] for x in chain()}
             return self._send(200,{"choices":[{"value":k,"label":v,"available":k=="auto" or k in av} for k,v in MODEL_CHOICES.items()]})
@@ -90,13 +97,14 @@ class H(BaseHTTPRequestHandler):
             if req.get("upload_id"):
                 up=up_get(str(req["upload_id"]))
                 if not up: return self._send(400,{"error":"上传的文件已过期，请重新上传"})
-                p=next((x for x in up[2] if x["asin"]==req.get("asin")),None)
-                if not p: return self._send(400,{"error":"上传文件中没有该 ASIN"})
-                src="upload:"+up[1]
-            else:
-                try: p=prod(req.get("asin"))
-                except StopIteration: return self._send(400,{"error":"未知商品"})
-                src="sample:mock_data.json"
+                ps=up[2]; src="upload:"+up[1]
+            else: ps=data()["products"]; src="sample:mock_data.json"
+            raw=req.get("query",req.get("asin"))
+            q=clean_q(raw)
+            if not q: return self._send(400,{"error":"请输入 ASIN 或关键词，或从文档中选择"})
+            if len(q)>Q_MAX: return self._send(400,{"error":f"输入过长（最多 {Q_MAX} 个字符）"})
+            p=next((x for x in ps if x["asin"].upper()==q.upper() or q=="%s · %s"%(x["asin"],x["name"])),None)
+            if not p: return self._send(400,{"error":NO_COMP,"code":"no_match","products":[brief(x) for x in ps]})
             if not SLOTS.acquire(timeout=5): return self._send(503,{"error":"当前生成人数较多，请稍后再试"})
             try:
                 t0=time.time(); forced=bool(req.get("force_fail")); a=analyze(p)
@@ -166,7 +174,7 @@ class H(BaseHTTPRequestHandler):
         except Exception as e:
             print("upload parse failed:",type(e).__name__,flush=True); return self._send(400,{"error":"文件解析失败，请对照模板检查"})
         uid=up_put(fn,ps)
-        return self._send(200,{"upload_id":uid,"filename":fn,"count":len(ps),"products":[{"asin":p["asin"],"name":p["name"]} for p in ps]})
+        return self._send(200,{"upload_id":uid,"filename":fn,"count":len(ps),"products":[brief(p) for p in ps]})
     def log_message(self,*a): pass
 def free_port():
     s=socket.socket(); s.bind(("127.0.0.1",0)); p=s.getsockname()[1]; s.close(); return p

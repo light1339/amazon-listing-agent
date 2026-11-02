@@ -60,10 +60,11 @@ def template(p,a):
             "match_type":"精准" if k["rank"] and k["rank"]<50 else "词组","suggested_bid":"待验证","budget_share":"待验证"})
     if gaps: groups.append({"name":"竞品缺口词","keywords":gaps[:5],"match_type":"广泛","suggested_bid":"待验证","budget_share":"待验证"})
     return {"title":title,"bullets":bullets,"backend_terms":bt,"ad_groups":groups}
+PROMPT_COMPS=8  # 提示词只取前 N 个竞品标题，页面仍显示全部
 def generate(p,a,use_model=True,prefer=None,demo_reason=None):
     """返回 dict: g,v,mode,retries,err,model_used,chain(失败列表),tokens"""
     prompt=json.dumps({"product":{k:p[k] for k in("asin","noun","category","price","features")},"keywords":p["keywords"],"analysis":a,
-        "competitor_titles":[c["title"] for c in p["competitors"]]},ensure_ascii=False)
+        "competitor_titles":[(f'[{c["brand"]}] ' if c.get("brand") else "")+c["title"] for c in p["competitors"][:PROMPT_COMPS]]},ensure_ascii=False)
     ti=to=0; fails=[]
     pvs=chain() if use_model else []
     if prefer: pvs=[x for x in pvs if x["name"]==prefer]+[x for x in pvs if x["name"]!=prefer]

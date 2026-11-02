@@ -1,5 +1,5 @@
 {
- "_note": "示例数据（模拟），所有数字均为虚构，仅用于面试演示",
+ "_note": "示例数据（模拟），品牌、ASIN 与所有数字均为虚构，仅用于面试演示",
  "datasets": {
   "mock_data.json": "模拟数据 mock_data.json"
  },
@@ -46,158 +46,201 @@
      "keyword": "office coffee cup",
      "search_volume": 5400,
      "rank": 77
+    },
+    {
+     "keyword": "coffee mug with handle",
+     "search_volume": 14800,
+     "rank": null
     }
    ],
    "competitors": [
     {
      "rank": 1,
-     "asin": "B0COMP123400",
-     "title": "Vela Travel Coffee Mug – Tumbler, Leak-Proof, Spill Proof for Insulated",
+     "asin": "B0DEMO000C335",
+     "brand": "Trevalo",
+     "title": "Travel Coffee Mug by Trevalo, 16oz Gift Ready & BPA Free Design",
      "bullets": [
-      "TUMBLER – designed for daily use with leak-proof.",
-      "LEAK-PROOF – designed for daily use with tumbler.",
-      "SPILL PROOF – designed for daily use with insulated.",
-      "INSULATED – designed for daily use with spill proof.",
-      "WHAT YOU GET – 1 x travel coffee mug, user guide."
+      "GIFT READY – Comes in a gift box, a thoughtful present for coworkers and coffee lovers.",
+      "BPA FREE – Food-grade 18/8 stainless steel interior with no metallic taste.",
+      "LEAK-PROOF LID – Flip-lock seal stays tight in a bag, so no coffee stains on laptops or car seats.",
+      "DISHWASHER SAFE – Lid and body go straight in the top rack; no hidden gaskets to scrub."
      ],
-     "price": 17.72,
-     "rating": 4.3,
-     "reviews": 86
+     "price": 34.99,
+     "rating": 4.2,
+     "reviews": 5062
     },
     {
      "rank": 2,
-     "asin": "B0COMP123401",
-     "title": "Orca Travel Coffee Mug – Leak-Proof, Car Cup Holder, Insulated for Hot & Cold",
+     "asin": "B0DEMO001C251",
+     "brand": "Zentrik",
+     "title": "Zentrik Travel Coffee Mug 20oz, With Handle Car Cup Holder Mug with Gift Ready",
      "bullets": [
-      "LEAK-PROOF – designed for daily use with insulated.",
-      "CAR CUP HOLDER – designed for daily use with leak-proof.",
-      "INSULATED – designed for daily use with spill proof.",
-      "HOT & COLD – designed for daily use with insulated.",
-      "WHAT YOU GET – 1 x travel coffee mug, user guide."
+      "COMFORT HANDLE – Wide carry handle makes it easy to grab on busy mornings.",
+      "FITS CAR CUP HOLDER – Slim 2.8in base slides into most car and treadmill cup holders.",
+      "GIFT READY – Comes in a gift box, a thoughtful present for coworkers and coffee lovers.",
+      "LEAK-PROOF LID – Flip-lock seal stays tight in a bag, so no coffee stains on laptops or car seats.",
+      "BPA FREE – Food-grade 18/8 stainless steel interior with no metallic taste."
      ],
-     "price": 24.54,
-     "rating": 4.3,
-     "reviews": 74
+     "price": 31.99,
+     "rating": 4.6,
+     "reviews": 4598
     },
     {
      "rank": 3,
-     "asin": "B0COMP123402",
-     "title": "Pluto Travel Coffee Mug – Spill Proof, Insulated, Hot & Cold for Leak-Proof",
+     "asin": "B0DEMO002C889",
+     "brand": "Brisko",
+     "title": "Brisko Travel Coffee Mug 12oz, Gift Ready Dishwasher Safe Mug with One-Hand Open",
      "bullets": [
-      "SPILL PROOF – designed for daily use with stainless steel.",
-      "INSULATED – designed for daily use with travel mug.",
-      "HOT & COLD – designed for daily use with leak-proof.",
-      "LEAK-PROOF – designed for daily use with hot & cold.",
-      "WHAT YOU GET – 1 x travel coffee mug, user guide."
+      "GIFT READY – Comes in a gift box, a thoughtful present for coworkers and coffee lovers.",
+      "DISHWASHER SAFE – Lid and body go straight in the top rack; no hidden gaskets to scrub.",
+      "ONE-HAND OPEN – Push-button lid opens with your thumb while you drive or carry a bag.",
+      "COMFORT HANDLE – Wide carry handle makes it easy to grab on busy mornings.",
+      "LEAK-PROOF LID – Flip-lock seal stays tight in a bag, so no coffee stains on laptops or car seats."
      ],
-     "price": 24.33,
+     "price": 34.99,
      "rating": 4.5,
-     "reviews": 91
+     "reviews": 3789
     },
     {
      "rank": 4,
-     "asin": "B0COMP123403",
-     "title": "Vela Travel Coffee Mug – Leak-Proof, Hot & Cold, Stainless Steel for Car Cup Holder",
+     "asin": "B0DEMO003C656",
+     "brand": "Quillo",
+     "title": "Travel Coffee Mug by Quillo, 12oz Car Cup Holder & BPA Free Design",
      "bullets": [
-      "LEAK-PROOF – designed for daily use with leak-proof.",
-      "HOT & COLD – designed for daily use with insulated.",
-      "STAINLESS STEEL – designed for daily use with spill proof.",
-      "CAR CUP HOLDER – designed for daily use with car cup holder.",
-      "WHAT YOU GET – 1 x travel coffee mug, user guide."
+      "FITS CAR CUP HOLDER – Slim 2.8in base slides into most car and treadmill cup holders.",
+      "BPA FREE – Food-grade 18/8 stainless steel interior with no metallic taste.",
+      "DISHWASHER SAFE – Lid and body go straight in the top rack; no hidden gaskets to scrub.",
+      "COMFORT HANDLE – Wide carry handle makes it easy to grab on busy mornings."
      ],
-     "price": 25.85,
-     "rating": 4.3,
-     "reviews": 1565
+     "price": 15.99,
+     "rating": 4.6,
+     "reviews": 2808
     },
     {
      "rank": 5,
-     "asin": "B0COMP123404",
-     "title": "Pluto Travel Coffee Mug – Tumbler, Spill Proof, Hot & Cold for Stainless Steel",
+     "asin": "B0DEMO004C149",
+     "brand": "Tobrin",
+     "title": "Tobrin 14oz Travel Coffee Mug, One-Hand Open, Dishwasher Safe, Gift Ready – Gift for Home & Office",
      "bullets": [
-      "TUMBLER – designed for daily use with spill proof.",
-      "SPILL PROOF – designed for daily use with travel mug.",
-      "HOT & COLD – designed for daily use with spill proof.",
-      "STAINLESS STEEL – designed for daily use with leak-proof.",
-      "WHAT YOU GET – 1 x travel coffee mug, user guide."
+      "ONE-HAND OPEN – Push-button lid opens with your thumb while you drive or carry a bag.",
+      "DISHWASHER SAFE – Lid and body go straight in the top rack; no hidden gaskets to scrub.",
+      "GIFT READY – Comes in a gift box, a thoughtful present for coworkers and coffee lovers.",
+      "COMFORT HANDLE – Wide carry handle makes it easy to grab on busy mornings.",
+      "FITS CAR CUP HOLDER – Slim 2.8in base slides into most car and treadmill cup holders."
      ],
-     "price": 24.51,
-     "rating": 4.4,
-     "reviews": 1521
+     "price": 36.99,
+     "rating": 4.9,
+     "reviews": 2783
     },
     {
      "rank": 6,
-     "asin": "B0COMP123405",
-     "title": "Vela Travel Coffee Mug – Tumbler, Car Cup Holder, Spill Proof for Travel Mug",
+     "asin": "B0DEMO005C491",
+     "brand": "Nestlyn",
+     "title": "Nestlyn With Handle Travel Coffee Mug – 14oz, Leak-Proof, Gift Ready",
      "bullets": [
-      "TUMBLER – designed for daily use with leak-proof.",
-      "CAR CUP HOLDER – designed for daily use with stainless steel.",
-      "SPILL PROOF – designed for daily use with travel mug.",
-      "TRAVEL MUG – designed for daily use with tumbler.",
-      "WHAT YOU GET – 1 x travel coffee mug, user guide."
+      "COMFORT HANDLE – Wide carry handle makes it easy to grab on busy mornings.",
+      "LEAK-PROOF LID – Flip-lock seal stays tight in a bag, so no coffee stains on laptops or car seats.",
+      "GIFT READY – Comes in a gift box, a thoughtful present for coworkers and coffee lovers.",
+      "ONE-HAND OPEN – Push-button lid opens with your thumb while you drive or carry a bag.",
+      "BPA FREE – Food-grade 18/8 stainless steel interior with no metallic taste."
      ],
-     "price": 19.16,
+     "price": 28.99,
      "rating": 4.3,
-     "reviews": 2534
+     "reviews": 1608
     },
     {
      "rank": 7,
-     "asin": "B0COMP123406",
-     "title": "Zest Travel Coffee Mug – Insulated, Tumbler, Car Cup Holder for Hot & Cold",
+     "asin": "B0DEMO006C939",
+     "brand": "Marvessa",
+     "title": "Marvessa Travel Coffee Mug 12oz, With Handle BPA Free Mug with Dishwasher Safe",
      "bullets": [
-      "INSULATED – designed for daily use with tumbler.",
-      "TUMBLER – designed for daily use with tumbler.",
-      "CAR CUP HOLDER – designed for daily use with car cup holder.",
-      "HOT & COLD – designed for daily use with car cup holder.",
-      "WHAT YOU GET – 1 x travel coffee mug, user guide."
+      "COMFORT HANDLE – Wide carry handle makes it easy to grab on busy mornings.",
+      "BPA FREE – Food-grade 18/8 stainless steel interior with no metallic taste.",
+      "DISHWASHER SAFE – Lid and body go straight in the top rack; no hidden gaskets to scrub.",
+      "KEEPS HOT 12 HOURS – Double-wall vacuum insulation keeps drinks hot for 12 hours and iced for 24."
      ],
-     "price": 18.11,
-     "rating": 4.0,
-     "reviews": 2387
+     "price": 33.95,
+     "rating": 4.6,
+     "reviews": 1459
     },
     {
      "rank": 8,
-     "asin": "B0COMP123407",
-     "title": "Pluto Travel Coffee Mug – Hot & Cold, Spill Proof, Tumbler for Insulated",
+     "asin": "B0DEMO007C893",
+     "brand": "Kivora",
+     "title": "Kivora 20oz Travel Coffee Mug, Gift Ready, Car Cup Holder, With Handle – Gift for Home & Office",
      "bullets": [
-      "HOT & COLD – designed for daily use with car cup holder.",
-      "SPILL PROOF – designed for daily use with hot & cold.",
-      "TUMBLER – designed for daily use with stainless steel.",
-      "INSULATED – designed for daily use with tumbler.",
-      "WHAT YOU GET – 1 x travel coffee mug, user guide."
+      "GIFT READY – Comes in a gift box, a thoughtful present for coworkers and coffee lovers.",
+      "FITS CAR CUP HOLDER – Slim 2.8in base slides into most car and treadmill cup holders.",
+      "COMFORT HANDLE – Wide carry handle makes it easy to grab on busy mornings.",
+      "DISHWASHER SAFE – Lid and body go straight in the top rack; no hidden gaskets to scrub.",
+      "KEEPS HOT 12 HOURS – Double-wall vacuum insulation keeps drinks hot for 12 hours and iced for 24."
      ],
-     "price": 17.53,
-     "rating": 4.3,
-     "reviews": 288
+     "price": 24.99,
+     "rating": 4.2,
+     "reviews": 1373
     },
     {
      "rank": 9,
-     "asin": "B0COMP123408",
-     "title": "Mira Travel Coffee Mug – Travel Mug, Hot & Cold, Insulated for Spill Proof",
+     "asin": "B0DEMO008C952",
+     "brand": "Ambrin",
+     "title": "Travel Coffee Mug by Ambrin, 20oz Dishwasher Safe & Keeps Hot 12 Hours Design",
      "bullets": [
-      "TRAVEL MUG – designed for daily use with hot & cold.",
-      "HOT & COLD – designed for daily use with travel mug.",
-      "INSULATED – designed for daily use with spill proof.",
-      "SPILL PROOF – designed for daily use with stainless steel.",
-      "WHAT YOU GET – 1 x travel coffee mug, user guide."
+      "DISHWASHER SAFE – Lid and body go straight in the top rack; no hidden gaskets to scrub.",
+      "KEEPS HOT 12 HOURS – Double-wall vacuum insulation keeps drinks hot for 12 hours and iced for 24.",
+      "ONE-HAND OPEN – Push-button lid opens with your thumb while you drive or carry a bag.",
+      "GIFT READY – Comes in a gift box, a thoughtful present for coworkers and coffee lovers.",
+      "FITS CAR CUP HOLDER – Slim 2.8in base slides into most car and treadmill cup holders."
      ],
-     "price": 22.19,
-     "rating": 4.7,
-     "reviews": 281
+     "price": 15.99,
+     "rating": 4.5,
+     "reviews": 648
     },
     {
      "rank": 10,
-     "asin": "B0COMP123409",
-     "title": "Pluto Travel Coffee Mug – Leak-Proof, Car Cup Holder, Spill Proof for Tumbler",
+     "asin": "B0DEMO009C473",
+     "brand": "Lumetta",
+     "title": "Lumetta 12oz Travel Coffee Mug, Dishwasher Safe, Leak-Proof, Gift Ready – Gift for Home & Office",
      "bullets": [
-      "LEAK-PROOF – designed for daily use with travel mug.",
-      "CAR CUP HOLDER – designed for daily use with stainless steel.",
-      "SPILL PROOF – designed for daily use with hot & cold.",
-      "TUMBLER – designed for daily use with stainless steel.",
-      "WHAT YOU GET – 1 x travel coffee mug, user guide."
+      "DISHWASHER SAFE – Lid and body go straight in the top rack; no hidden gaskets to scrub.",
+      "LEAK-PROOF LID – Flip-lock seal stays tight in a bag, so no coffee stains on laptops or car seats.",
+      "GIFT READY – Comes in a gift box, a thoughtful present for coworkers and coffee lovers.",
+      "KEEPS HOT 12 HOURS – Double-wall vacuum insulation keeps drinks hot for 12 hours and iced for 24."
      ],
-     "price": 29.72,
+     "price": 22.25,
+     "rating": 4.0,
+     "reviews": 480
+    },
+    {
+     "rank": 11,
+     "asin": "B0DEMO010C248",
+     "brand": "Halvo",
+     "title": "Travel Coffee Mug by Halvo, 12oz BPA Free & Dishwasher Safe Design",
+     "bullets": [
+      "BPA FREE – Food-grade 18/8 stainless steel interior with no metallic taste.",
+      "DISHWASHER SAFE – Lid and body go straight in the top rack; no hidden gaskets to scrub.",
+      "COMFORT HANDLE – Wide carry handle makes it easy to grab on busy mornings.",
+      "LEAK-PROOF LID – Flip-lock seal stays tight in a bag, so no coffee stains on laptops or car seats.",
+      "ONE-HAND OPEN – Push-button lid opens with your thumb while you drive or carry a bag."
+     ],
+     "price": 33.34,
+     "rating": 4.4,
+     "reviews": 67
+    },
+    {
+     "rank": 12,
+     "asin": "B0DEMO011C320",
+     "brand": "Solmira",
+     "title": "Travel Coffee Mug by Solmira, 20oz BPA Free & With Handle Design",
+     "bullets": [
+      "BPA FREE – Food-grade 18/8 stainless steel interior with no metallic taste.",
+      "COMFORT HANDLE – Wide carry handle makes it easy to grab on busy mornings.",
+      "GIFT READY – Comes in a gift box, a thoughtful present for coworkers and coffee lovers.",
+      "DISHWASHER SAFE – Lid and body go straight in the top rack; no hidden gaskets to scrub.",
+      "KEEPS HOT 12 HOURS – Double-wall vacuum insulation keeps drinks hot for 12 hours and iced for 24."
+     ],
+     "price": 24.99,
      "rating": 4.5,
-     "reviews": 2290
+     "reviews": 76
     }
    ]
   },
@@ -243,158 +286,199 @@
      "keyword": "tpe yoga mat",
      "search_volume": 6600,
      "rank": 19
+    },
+    {
+     "keyword": "yoga mat for women",
+     "search_volume": 18100,
+     "rank": null
     }
    ],
    "competitors": [
     {
      "rank": 1,
-     "asin": "B0COMP567800",
-     "title": "Kino Yoga Mat – Workout, Extra Thick, Alignment Lines for Non-Slip",
+     "asin": "B0DEMO100C221",
+     "brand": "Fenwyr",
+     "title": "Fenwyr Yoga Mat 4mm, Extra Thick Carry Strap Mat with Double-Sided Non-Slip",
      "bullets": [
-      "WORKOUT – designed for daily use with eco friendly.",
-      "EXTRA THICK – designed for daily use with exercise mat.",
-      "ALIGNMENT LINES – designed for daily use with exercise mat.",
-      "NON-SLIP – designed for daily use with non-slip.",
-      "WHAT YOU GET – 1 x yoga mat, user guide."
+      "EXTRA THICK CUSHION – High-density foam protects knees and wrists on hard floors.",
+      "CARRY STRAP INCLUDED – Adjustable strap for easy carrying to the gym or studio.",
+      "DOUBLE-SIDED NON-SLIP – Textured top and wave-pattern bottom grip both palms and floor.",
+      "EXTRA WIDE 72x32IN – More room for side planks and stretching without stepping off."
      ],
-     "price": 30.49,
-     "rating": 4.4,
-     "reviews": 5200
+     "price": 38.99,
+     "rating": 4.5,
+     "reviews": 3426
     },
     {
      "rank": 2,
-     "asin": "B0COMP567801",
-     "title": "Orca Yoga Mat – Pilates, Eco Friendly, Non-Slip for Extra Thick",
+     "asin": "B0DEMO101C109",
+     "brand": "Zentrik",
+     "title": "Zentrik Carry Strap Yoga Mat – 6mm, Extra Wide, Extra Thick",
      "bullets": [
-      "PILATES – designed for daily use with carry strap.",
-      "ECO FRIENDLY – designed for daily use with carry strap.",
-      "NON-SLIP – designed for daily use with eco friendly.",
-      "EXTRA THICK – designed for daily use with non-slip.",
-      "WHAT YOU GET – 1 x yoga mat, user guide."
+      "CARRY STRAP INCLUDED – Adjustable strap for easy carrying to the gym or studio.",
+      "EXTRA WIDE 72x32IN – More room for side planks and stretching without stepping off.",
+      "EXTRA THICK CUSHION – High-density foam protects knees and wrists on hard floors.",
+      "DOUBLE-SIDED NON-SLIP – Textured top and wave-pattern bottom grip both palms and floor."
      ],
-     "price": 30.02,
-     "rating": 4.7,
-     "reviews": 3100
+     "price": 42.99,
+     "rating": 4.2,
+     "reviews": 2381
     },
     {
      "rank": 3,
-     "asin": "B0COMP567802",
-     "title": "Vela Yoga Mat – Workout, Exercise Mat, Alignment Lines for Carry Strap",
+     "asin": "B0DEMO102C951",
+     "brand": "Oakvy",
+     "title": "Yoga Mat by Oakvy, 8mm Extra Thick & Eco Friendly Design",
      "bullets": [
-      "WORKOUT – designed for daily use with alignment lines.",
-      "EXERCISE MAT – designed for daily use with workout.",
-      "ALIGNMENT LINES – designed for daily use with non-slip.",
-      "CARRY STRAP – designed for daily use with exercise mat.",
-      "WHAT YOU GET – 1 x yoga mat, user guide."
+      "EXTRA THICK CUSHION – High-density foam protects knees and wrists on hard floors.",
+      "ECO FRIENDLY – Latex-free, odor-tested material that is recyclable.",
+      "CARRY STRAP INCLUDED – Adjustable strap for easy carrying to the gym or studio.",
+      "ALIGNMENT LINES – Printed body guides help beginners keep hands and feet in position."
      ],
-     "price": 23.6,
-     "rating": 4.1,
-     "reviews": 1450
+     "price": 23.75,
+     "rating": 4.5,
+     "reviews": 2355
     },
     {
      "rank": 4,
-     "asin": "B0COMP567803",
-     "title": "Vela Yoga Mat – Eco Friendly, Non-Slip, Alignment Lines for Pilates",
+     "asin": "B0DEMO103C386",
+     "brand": "Quillo",
+     "title": "Quillo Extra Thick Yoga Mat – 4mm, Pilates, Alignment Lines",
      "bullets": [
-      "ECO FRIENDLY – designed for daily use with non-slip.",
-      "NON-SLIP – designed for daily use with eco friendly.",
-      "ALIGNMENT LINES – designed for daily use with extra thick.",
-      "PILATES – designed for daily use with carry strap.",
-      "WHAT YOU GET – 1 x yoga mat, user guide."
+      "EXTRA THICK CUSHION – High-density foam protects knees and wrists on hard floors.",
+      "PILATES & HIIT – Firm enough for balance poses, soft enough for floor workouts.",
+      "ALIGNMENT LINES – Printed body guides help beginners keep hands and feet in position.",
+      "DOUBLE-SIDED NON-SLIP – Textured top and wave-pattern bottom grip both palms and floor.",
+      "EXTRA WIDE 72x32IN – More room for side planks and stretching without stepping off."
      ],
-     "price": 32.62,
-     "rating": 4.0,
-     "reviews": 255
+     "price": 24.99,
+     "rating": 4.8,
+     "reviews": 2211
     },
     {
      "rank": 5,
-     "asin": "B0COMP567804",
-     "title": "Pluto Yoga Mat – Exercise Mat, Pilates, Alignment Lines for Extra Thick",
+     "asin": "B0DEMO104C547",
+     "brand": "Brisko",
+     "title": "Brisko Carry Strap Yoga Mat – 8mm, Sweat Resistant, Double-Sided Non-Slip",
      "bullets": [
-      "EXERCISE MAT – designed for daily use with carry strap.",
-      "PILATES – designed for daily use with carry strap.",
-      "ALIGNMENT LINES – designed for daily use with alignment lines.",
-      "EXTRA THICK – designed for daily use with extra thick.",
-      "WHAT YOU GET – 1 x yoga mat, user guide."
+      "CARRY STRAP INCLUDED – Adjustable strap for easy carrying to the gym or studio.",
+      "SWEAT RESISTANT – Closed-cell surface blocks sweat and wipes clean in seconds.",
+      "DOUBLE-SIDED NON-SLIP – Textured top and wave-pattern bottom grip both palms and floor.",
+      "ALIGNMENT LINES – Printed body guides help beginners keep hands and feet in position."
      ],
-     "price": 24.4,
-     "rating": 4.3,
-     "reviews": 2638
+     "price": 34.99,
+     "rating": 4.4,
+     "reviews": 2156
     },
     {
      "rank": 6,
-     "asin": "B0COMP567805",
-     "title": "Kino Yoga Mat – Alignment Lines, Exercise Mat, Workout for Eco Friendly",
+     "asin": "B0DEMO105C396",
+     "brand": "Marvessa",
+     "title": "Marvessa Yoga Mat 10mm, Pilates Sweat Resistant Mat with Extra Wide",
      "bullets": [
-      "ALIGNMENT LINES – designed for daily use with extra thick.",
-      "EXERCISE MAT – designed for daily use with carry strap.",
-      "WORKOUT – designed for daily use with pilates.",
-      "ECO FRIENDLY – designed for daily use with alignment lines.",
-      "WHAT YOU GET – 1 x yoga mat, user guide."
+      "PILATES & HIIT – Firm enough for balance poses, soft enough for floor workouts.",
+      "SWEAT RESISTANT – Closed-cell surface blocks sweat and wipes clean in seconds.",
+      "EXTRA WIDE 72x32IN – More room for side planks and stretching without stepping off.",
+      "ECO FRIENDLY – Latex-free, odor-tested material that is recyclable.",
+      "EXTRA THICK CUSHION – High-density foam protects knees and wrists on hard floors."
      ],
-     "price": 36.16,
-     "rating": 4.0,
-     "reviews": 391
+     "price": 54.99,
+     "rating": 4.6,
+     "reviews": 971
     },
     {
      "rank": 7,
-     "asin": "B0COMP567806",
-     "title": "Aurora Yoga Mat – Non-Slip, Extra Thick, Pilates for Eco Friendly",
+     "asin": "B0DEMO106C954",
+     "brand": "Tobrin",
+     "title": "Tobrin 8mm Yoga Mat, Double-Sided Non-Slip, Carry Strap, Extra Thick",
      "bullets": [
-      "NON-SLIP – designed for daily use with pilates.",
-      "EXTRA THICK – designed for daily use with extra thick.",
-      "PILATES – designed for daily use with pilates.",
-      "ECO FRIENDLY – designed for daily use with carry strap.",
-      "WHAT YOU GET – 1 x yoga mat, user guide."
+      "DOUBLE-SIDED NON-SLIP – Textured top and wave-pattern bottom grip both palms and floor.",
+      "CARRY STRAP INCLUDED – Adjustable strap for easy carrying to the gym or studio.",
+      "EXTRA THICK CUSHION – High-density foam protects knees and wrists on hard floors.",
+      "SWEAT RESISTANT – Closed-cell surface blocks sweat and wipes clean in seconds."
      ],
-     "price": 37.47,
-     "rating": 4.2,
-     "reviews": 640
+     "price": 49.83,
+     "rating": 3.9,
+     "reviews": 571
     },
     {
      "rank": 8,
-     "asin": "B0COMP567807",
-     "title": "Mira Yoga Mat – Exercise Mat, Pilates, Workout for Carry Strap",
+     "asin": "B0DEMO107C883",
+     "brand": "Nestlyn",
+     "title": "Nestlyn Eco Friendly Yoga Mat – 10mm, Extra Wide, Carry Strap",
      "bullets": [
-      "EXERCISE MAT – designed for daily use with exercise mat.",
-      "PILATES – designed for daily use with exercise mat.",
-      "WORKOUT – designed for daily use with workout.",
-      "CARRY STRAP – designed for daily use with exercise mat.",
-      "WHAT YOU GET – 1 x yoga mat, user guide."
+      "ECO FRIENDLY – Latex-free, odor-tested material that is recyclable.",
+      "EXTRA WIDE 72x32IN – More room for side planks and stretching without stepping off.",
+      "CARRY STRAP INCLUDED – Adjustable strap for easy carrying to the gym or studio.",
+      "DOUBLE-SIDED NON-SLIP – Textured top and wave-pattern bottom grip both palms and floor.",
+      "ALIGNMENT LINES – Printed body guides help beginners keep hands and feet in position."
      ],
-     "price": 25.79,
-     "rating": 4.3,
-     "reviews": 1390
+     "price": 19.99,
+     "rating": 4.5,
+     "reviews": 550
     },
     {
      "rank": 9,
-     "asin": "B0COMP567808",
-     "title": "Mira Yoga Mat – Non-Slip, Alignment Lines, Eco Friendly for Exercise Mat",
+     "asin": "B0DEMO108C217",
+     "brand": "Lumetta",
+     "title": "Lumetta Sweat Resistant Yoga Mat – 10mm, Pilates, Double-Sided Non-Slip",
      "bullets": [
-      "NON-SLIP – designed for daily use with carry strap.",
-      "ALIGNMENT LINES – designed for daily use with alignment lines.",
-      "ECO FRIENDLY – designed for daily use with carry strap.",
-      "EXERCISE MAT – designed for daily use with carry strap.",
-      "WHAT YOU GET – 1 x yoga mat, user guide."
+      "SWEAT RESISTANT – Closed-cell surface blocks sweat and wipes clean in seconds.",
+      "PILATES & HIIT – Firm enough for balance poses, soft enough for floor workouts.",
+      "DOUBLE-SIDED NON-SLIP – Textured top and wave-pattern bottom grip both palms and floor.",
+      "ALIGNMENT LINES – Printed body guides help beginners keep hands and feet in position.",
+      "ECO FRIENDLY – Latex-free, odor-tested material that is recyclable."
      ],
-     "price": 23.82,
-     "rating": 4.0,
-     "reviews": 1101
+     "price": 19.99,
+     "rating": 4.2,
+     "reviews": 491
     },
     {
      "rank": 10,
-     "asin": "B0COMP567809",
-     "title": "Aurora Yoga Mat – Alignment Lines, Extra Thick, Eco Friendly for Workout",
+     "asin": "B0DEMO109C656",
+     "brand": "Kivora",
+     "title": "Kivora Eco Friendly Yoga Mat – 8mm, Pilates, Extra Wide",
      "bullets": [
-      "ALIGNMENT LINES – designed for daily use with alignment lines.",
-      "EXTRA THICK – designed for daily use with carry strap.",
-      "ECO FRIENDLY – designed for daily use with extra thick.",
-      "WORKOUT – designed for daily use with extra thick.",
-      "WHAT YOU GET – 1 x yoga mat, user guide."
+      "ECO FRIENDLY – Latex-free, odor-tested material that is recyclable.",
+      "PILATES & HIIT – Firm enough for balance poses, soft enough for floor workouts.",
+      "EXTRA WIDE 72x32IN – More room for side planks and stretching without stepping off.",
+      "ALIGNMENT LINES – Printed body guides help beginners keep hands and feet in position."
      ],
-     "price": 37.5,
-     "rating": 4.6,
-     "reviews": 2016
+     "price": 45.99,
+     "rating": 4.2,
+     "reviews": 319
+    },
+    {
+     "rank": 11,
+     "asin": "B0DEMO110C185",
+     "brand": "Trevalo",
+     "title": "Trevalo 10mm Yoga Mat, Carry Strap, Sweat Resistant, Extra Thick",
+     "bullets": [
+      "CARRY STRAP INCLUDED – Adjustable strap for easy carrying to the gym or studio.",
+      "SWEAT RESISTANT – Closed-cell surface blocks sweat and wipes clean in seconds.",
+      "EXTRA THICK CUSHION – High-density foam protects knees and wrists on hard floors.",
+      "EXTRA WIDE 72x32IN – More room for side planks and stretching without stepping off.",
+      "PILATES & HIIT – Firm enough for balance poses, soft enough for floor workouts."
+     ],
+     "price": 56.99,
+     "rating": 4.4,
+     "reviews": 75
+    },
+    {
+     "rank": 12,
+     "asin": "B0DEMO111C897",
+     "brand": "Corvane",
+     "title": "Corvane 8mm Yoga Mat, Eco Friendly, Carry Strap, Extra Wide",
+     "bullets": [
+      "ECO FRIENDLY – Latex-free, odor-tested material that is recyclable.",
+      "CARRY STRAP INCLUDED – Adjustable strap for easy carrying to the gym or studio.",
+      "EXTRA WIDE 72x32IN – More room for side planks and stretching without stepping off.",
+      "SWEAT RESISTANT – Closed-cell surface blocks sweat and wipes clean in seconds.",
+      "ALIGNMENT LINES – Printed body guides help beginners keep hands and feet in position."
+     ],
+     "price": 55.99,
+     "rating": 4.2,
+     "reviews": 58
     }
    ]
   },
@@ -435,158 +519,804 @@
      "keyword": "water fountain filter",
      "search_volume": 12100,
      "rank": null
+    },
+    {
+     "keyword": "stainless steel cat fountain",
+     "search_volume": 8100,
+     "rank": null
     }
    ],
    "competitors": [
     {
      "rank": 1,
-     "asin": "B0COMP901200",
-     "title": "Zest Pet Water Fountain – Dog, Led, Quiet for Dishwasher Safe",
+     "asin": "B0DEMO200C229",
+     "brand": "Fenwyr",
+     "title": "Fenwyr Pet Water Fountain 1.8L, Stainless Steel Ultra Quiet Fountain with Dishwasher Safe",
      "bullets": [
-      "DOG – designed for daily use with quiet.",
-      "LED – designed for daily use with dishwasher safe.",
-      "QUIET – designed for daily use with LED.",
-      "DISHWASHER SAFE – designed for daily use with dishwasher safe.",
-      "WHAT YOU GET – 1 x pet water fountain, user guide."
+      "STAINLESS STEEL TRAY – Food-grade steel top resists scratches and chin acne.",
+      "ULTRA QUIET PUMP – Runs under 25dB, so it will not wake you or scare shy cats.",
+      "DISHWASHER SAFE – Body and tray come apart in seconds for weekly cleaning.",
+      "TRIPLE FILTRATION – Cotton, carbon and resin layers trap hair and odors.",
+      "WIRELESS PUMP – Induction power means no cord sits in the water."
      ],
-     "price": 41.71,
-     "rating": 4.0,
-     "reviews": 380
+     "price": 30.99,
+     "rating": 4.4,
+     "reviews": 5042
     },
     {
      "rank": 2,
-     "asin": "B0COMP901201",
-     "title": "Kino Pet Water Fountain – Filter, Quiet, Dishwasher Safe for Cat Water Fountain",
+     "asin": "B0DEMO201C534",
+     "brand": "Oakvy",
+     "title": "Oakvy Pet Water Fountain 3L, Multi-Pet Wireless Pump Fountain with Dishwasher Safe",
      "bullets": [
-      "FILTER – designed for daily use with LED.",
-      "QUIET – designed for daily use with filter.",
-      "DISHWASHER SAFE – designed for daily use with LED.",
-      "CAT WATER FOUNTAIN – designed for daily use with BPA free.",
-      "WHAT YOU GET – 1 x pet water fountain, user guide."
+      "MULTI-PET CAPACITY – Large tank serves 2 cats or a small dog for up to a week.",
+      "WIRELESS PUMP – Induction power means no cord sits in the water.",
+      "DISHWASHER SAFE – Body and tray come apart in seconds for weekly cleaning.",
+      "AUTO SHUT-OFF – Pump stops when water is low to protect the motor."
      ],
-     "price": 30.08,
-     "rating": 4.4,
-     "reviews": 240
+     "price": 22.99,
+     "rating": 4.7,
+     "reviews": 2573
     },
     {
      "rank": 3,
-     "asin": "B0COMP901202",
-     "title": "Kino Pet Water Fountain – Cat Water Fountain, Led, Bpa Free for Dishwasher Safe",
+     "asin": "B0DEMO202C482",
+     "brand": "Halvo",
+     "title": "Halvo 2L Pet Water Fountain, Ultra Quiet, Multi-Pet, Dishwasher Safe",
      "bullets": [
-      "CAT WATER FOUNTAIN – designed for daily use with dishwasher safe.",
-      "LED – designed for daily use with dog.",
-      "BPA FREE – designed for daily use with dog.",
-      "DISHWASHER SAFE – designed for daily use with cat water fountain.",
-      "WHAT YOU GET – 1 x pet water fountain, user guide."
+      "ULTRA QUIET PUMP – Runs under 25dB, so it will not wake you or scare shy cats.",
+      "MULTI-PET CAPACITY – Large tank serves 2 cats or a small dog for up to a week.",
+      "DISHWASHER SAFE – Body and tray come apart in seconds for weekly cleaning.",
+      "STAINLESS STEEL TRAY – Food-grade steel top resists scratches and chin acne."
      ],
-     "price": 31.98,
-     "rating": 4.2,
-     "reviews": 610
+     "price": 36.99,
+     "rating": 4.3,
+     "reviews": 1661
     },
     {
      "rank": 4,
-     "asin": "B0COMP901203",
-     "title": "Orca Pet Water Fountain – Dog, Dishwasher Safe, Automatic for Filter",
+     "asin": "B0DEMO203C603",
+     "brand": "Quillo",
+     "title": "Quillo Pet Water Fountain 3L, Ultra Quiet Auto Shut-Off Fountain with LED Indicator",
      "bullets": [
-      "DOG – designed for daily use with filter.",
-      "DISHWASHER SAFE – designed for daily use with cat water fountain.",
-      "AUTOMATIC – designed for daily use with BPA free.",
-      "FILTER – designed for daily use with LED.",
-      "WHAT YOU GET – 1 x pet water fountain, user guide."
+      "ULTRA QUIET PUMP – Runs under 25dB, so it will not wake you or scare shy cats.",
+      "AUTO SHUT-OFF – Pump stops when water is low to protect the motor.",
+      "LED WATER LEVEL – Light changes color when water runs low.",
+      "STAINLESS STEEL TRAY – Food-grade steel top resists scratches and chin acne.",
+      "TRIPLE FILTRATION – Cotton, carbon and resin layers trap hair and odors."
      ],
-     "price": 40.11,
-     "rating": 4.6,
-     "reviews": 1102
+     "price": 55.99,
+     "rating": 4.4,
+     "reviews": 1639
     },
     {
      "rank": 5,
-     "asin": "B0COMP901204",
-     "title": "Kino Pet Water Fountain – Dishwasher Safe, Led, Automatic for Quiet",
+     "asin": "B0DEMO204C545",
+     "brand": "Ambrin",
+     "title": "Ambrin Auto Shut-Off Pet Water Fountain – 1.8L, Multi-Pet, Wireless Pump",
      "bullets": [
-      "DISHWASHER SAFE – designed for daily use with cat water fountain.",
-      "LED – designed for daily use with LED.",
-      "AUTOMATIC – designed for daily use with filter.",
-      "QUIET – designed for daily use with cat water fountain.",
-      "WHAT YOU GET – 1 x pet water fountain, user guide."
+      "AUTO SHUT-OFF – Pump stops when water is low to protect the motor.",
+      "MULTI-PET CAPACITY – Large tank serves 2 cats or a small dog for up to a week.",
+      "WIRELESS PUMP – Induction power means no cord sits in the water.",
+      "TRIPLE FILTRATION – Cotton, carbon and resin layers trap hair and odors."
      ],
-     "price": 42.35,
-     "rating": 4.0,
-     "reviews": 2218
+     "price": 48.99,
+     "rating": 4.3,
+     "reviews": 1415
     },
     {
      "rank": 6,
-     "asin": "B0COMP901205",
-     "title": "Aurora Pet Water Fountain – Filter, Dog, Automatic for Cat Water Fountain",
+     "asin": "B0DEMO205C850",
+     "brand": "Solmira",
+     "title": "Pet Water Fountain by Solmira, 2.5L Stainless Steel & Dishwasher Safe Design",
      "bullets": [
-      "FILTER – designed for daily use with BPA free.",
-      "DOG – designed for daily use with LED.",
-      "AUTOMATIC – designed for daily use with quiet.",
-      "CAT WATER FOUNTAIN – designed for daily use with cat water fountain.",
-      "WHAT YOU GET – 1 x pet water fountain, user guide."
+      "STAINLESS STEEL TRAY – Food-grade steel top resists scratches and chin acne.",
+      "DISHWASHER SAFE – Body and tray come apart in seconds for weekly cleaning.",
+      "ULTRA QUIET PUMP – Runs under 25dB, so it will not wake you or scare shy cats.",
+      "AUTO SHUT-OFF – Pump stops when water is low to protect the motor."
      ],
-     "price": 31.91,
-     "rating": 4.1,
-     "reviews": 2319
+     "price": 52.99,
+     "rating": 4.4,
+     "reviews": 1272
     },
     {
      "rank": 7,
-     "asin": "B0COMP901206",
-     "title": "Vela Pet Water Fountain – Quiet, Automatic, Dog for Dishwasher Safe",
+     "asin": "B0DEMO206C976",
+     "brand": "Nestlyn",
+     "title": "Pet Water Fountain by Nestlyn, 2L Auto Shut-Off & Wireless Pump Design",
      "bullets": [
-      "QUIET – designed for daily use with LED.",
-      "AUTOMATIC – designed for daily use with BPA free.",
-      "DOG – designed for daily use with dog.",
-      "DISHWASHER SAFE – designed for daily use with automatic.",
-      "WHAT YOU GET – 1 x pet water fountain, user guide."
+      "AUTO SHUT-OFF – Pump stops when water is low to protect the motor.",
+      "WIRELESS PUMP – Induction power means no cord sits in the water.",
+      "STAINLESS STEEL TRAY – Food-grade steel top resists scratches and chin acne.",
+      "TRIPLE FILTRATION – Cotton, carbon and resin layers trap hair and odors."
      ],
-     "price": 35.95,
-     "rating": 4.4,
-     "reviews": 154
+     "price": 42.99,
+     "rating": 4.1,
+     "reviews": 1227
     },
     {
      "rank": 8,
-     "asin": "B0COMP901207",
-     "title": "Pluto Pet Water Fountain – Led, Automatic, Quiet for Dishwasher Safe",
+     "asin": "B0DEMO207C170",
+     "brand": "Corvane",
+     "title": "Pet Water Fountain by Corvane, 3L LED Indicator & Ultra Quiet Design",
      "bullets": [
-      "LED – designed for daily use with dog.",
-      "AUTOMATIC – designed for daily use with LED.",
-      "QUIET – designed for daily use with filter.",
-      "DISHWASHER SAFE – designed for daily use with dishwasher safe.",
-      "WHAT YOU GET – 1 x pet water fountain, user guide."
+      "LED WATER LEVEL – Light changes color when water runs low.",
+      "ULTRA QUIET PUMP – Runs under 25dB, so it will not wake you or scare shy cats.",
+      "AUTO SHUT-OFF – Pump stops when water is low to protect the motor.",
+      "WIRELESS PUMP – Induction power means no cord sits in the water.",
+      "TRIPLE FILTRATION – Cotton, carbon and resin layers trap hair and odors."
      ],
-     "price": 29.4,
-     "rating": 4.3,
-     "reviews": 3630
+     "price": 41.99,
+     "rating": 4.0,
+     "reviews": 957
     },
     {
      "rank": 9,
-     "asin": "B0COMP901208",
-     "title": "Mira Pet Water Fountain – Quiet, Bpa Free, Led for Dog",
+     "asin": "B0DEMO208C912",
+     "brand": "Kivora",
+     "title": "Kivora Pet Water Fountain 3L, Ultra Quiet Multi-Pet Fountain with Triple Filtration",
      "bullets": [
-      "QUIET – designed for daily use with automatic.",
-      "BPA FREE – designed for daily use with quiet.",
-      "LED – designed for daily use with filter.",
-      "DOG – designed for daily use with BPA free.",
-      "WHAT YOU GET – 1 x pet water fountain, user guide."
+      "ULTRA QUIET PUMP – Runs under 25dB, so it will not wake you or scare shy cats.",
+      "MULTI-PET CAPACITY – Large tank serves 2 cats or a small dog for up to a week.",
+      "TRIPLE FILTRATION – Cotton, carbon and resin layers trap hair and odors.",
+      "LED WATER LEVEL – Light changes color when water runs low."
      ],
-     "price": 29.82,
-     "rating": 4.7,
-     "reviews": 339
+     "price": 39.99,
+     "rating": 4.0,
+     "reviews": 810
     },
     {
      "rank": 10,
-     "asin": "B0COMP901209",
-     "title": "Lumi Pet Water Fountain – Led, Quiet, Bpa Free for Cat Water Fountain",
+     "asin": "B0DEMO209C560",
+     "brand": "Zentrik",
+     "title": "Pet Water Fountain by Zentrik, 2L Auto Shut-Off & Multi-Pet Design",
      "bullets": [
-      "LED – designed for daily use with filter.",
-      "QUIET – designed for daily use with dog.",
-      "BPA FREE – designed for daily use with filter.",
-      "CAT WATER FOUNTAIN – designed for daily use with dishwasher safe.",
-      "WHAT YOU GET – 1 x pet water fountain, user guide."
+      "AUTO SHUT-OFF – Pump stops when water is low to protect the motor.",
+      "MULTI-PET CAPACITY – Large tank serves 2 cats or a small dog for up to a week.",
+      "ULTRA QUIET PUMP – Runs under 25dB, so it will not wake you or scare shy cats.",
+      "LED WATER LEVEL – Light changes color when water runs low."
      ],
-     "price": 46.67,
+     "price": 57.99,
+     "rating": 4.2,
+     "reviews": 762
+    },
+    {
+     "rank": 11,
+     "asin": "B0DEMO210C116",
+     "brand": "Marvessa",
+     "title": "Marvessa 2L Pet Water Fountain, LED Indicator, Triple Filtration, Dishwasher Safe",
+     "bullets": [
+      "LED WATER LEVEL – Light changes color when water runs low.",
+      "TRIPLE FILTRATION – Cotton, carbon and resin layers trap hair and odors.",
+      "DISHWASHER SAFE – Body and tray come apart in seconds for weekly cleaning.",
+      "ULTRA QUIET PUMP – Runs under 25dB, so it will not wake you or scare shy cats."
+     ],
+     "price": 25.99,
+     "rating": 4.6,
+     "reviews": 53
+    },
+    {
+     "rank": 12,
+     "asin": "B0DEMO211C988",
+     "brand": "Lumetta",
+     "title": "Lumetta 3L Pet Water Fountain, Stainless Steel, LED Indicator, Auto Shut-Off",
+     "bullets": [
+      "STAINLESS STEEL TRAY – Food-grade steel top resists scratches and chin acne.",
+      "LED WATER LEVEL – Light changes color when water runs low.",
+      "AUTO SHUT-OFF – Pump stops when water is low to protect the motor.",
+      "DISHWASHER SAFE – Body and tray come apart in seconds for weekly cleaning.",
+      "MULTI-PET CAPACITY – Large tank serves 2 cats or a small dog for up to a week."
+     ],
+     "price": 34.99,
+     "rating": 4.7,
+     "reviews": 36
+    }
+   ]
+  },
+  {
+   "asin": "B0DEMO3456",
+   "name": "LED 护眼台灯",
+   "noun": "LED Desk Lamp",
+   "category": "Home Office",
+   "price": 32.99,
+   "features": [
+    "5 color modes",
+    "USB-C charging port",
+    "touch control",
+    "foldable arm"
+   ],
+   "keywords": [
+    {
+     "keyword": "led desk lamp",
+     "search_volume": 165000,
+     "rank": 52
+    },
+    {
+     "keyword": "desk lamp with usb port",
+     "search_volume": 33100,
+     "rank": null
+    },
+    {
+     "keyword": "eye caring desk lamp",
+     "search_volume": 9900,
+     "rank": 37
+    },
+    {
+     "keyword": "dimmable desk lamp",
+     "search_volume": 14800,
+     "rank": 61
+    },
+    {
+     "keyword": "reading lamp",
+     "search_volume": 40500,
+     "rank": null
+    },
+    {
+     "keyword": "architect desk lamp",
+     "search_volume": 12100,
+     "rank": null
+    }
+   ],
+   "competitors": [
+    {
+     "rank": 1,
+     "asin": "B0DEMO300C818",
+     "brand": "Fenwyr",
+     "title": "Fenwyr Foldable LED Desk Lamp – 8W, Memory Function, Clamp Mount",
+     "bullets": [
+      "FOLDABLE ARM – Folds flat for travel and dorm rooms.",
+      "MEMORY FUNCTION – Remembers your last brightness and color setting.",
+      "CLAMP MOUNT – Fits desks up to 2.4in thick and frees up desk space.",
+      "WIRELESS CHARGER BASE – 10W Qi pad charges compatible phones."
+     ],
+     "price": 32.99,
+     "rating": 3.9,
+     "reviews": 32437
+    },
+    {
+     "rank": 2,
+     "asin": "B0DEMO301C755",
+     "brand": "Zentrik",
+     "title": "Zentrik 10W LED Desk Lamp, Memory Function, USB Charging Port, Foldable – Gift for Home & Office",
+     "bullets": [
+      "MEMORY FUNCTION – Remembers your last brightness and color setting.",
+      "USB CHARGING PORT – Charge your phone while you work and keep the desk tidy.",
+      "FOLDABLE ARM – Folds flat for travel and dorm rooms.",
+      "EYE-CARING LIGHT – Flicker-free LEDs with no blue-light hazard for long study sessions.",
+      "AUTO-OFF TIMER – 30/60 minute timer turns the light off when you fall asleep."
+     ],
+     "price": 52.99,
+     "rating": 4.1,
+     "reviews": 2295
+    },
+    {
+     "rank": 3,
+     "asin": "B0DEMO302C249",
+     "brand": "Brisko",
+     "title": "Brisko 12W LED Desk Lamp, Auto Timer, Foldable, 5 Color Modes – Gift for Home & Office",
+     "bullets": [
+      "AUTO-OFF TIMER – 30/60 minute timer turns the light off when you fall asleep.",
+      "FOLDABLE ARM – Folds flat for travel and dorm rooms.",
+      "5 COLOR MODES – From warm 3000K for reading to cool 6500K for focused work.",
+      "EYE-CARING LIGHT – Flicker-free LEDs with no blue-light hazard for long study sessions."
+     ],
+     "price": 31.99,
+     "rating": 4.4,
+     "reviews": 1780
+    },
+    {
+     "rank": 4,
+     "asin": "B0DEMO303C922",
+     "brand": "Halvo",
+     "title": "LED Desk Lamp by Halvo, 8W Clamp Mount & Wireless Charger Design",
+     "bullets": [
+      "CLAMP MOUNT – Fits desks up to 2.4in thick and frees up desk space.",
+      "WIRELESS CHARGER BASE – 10W Qi pad charges compatible phones.",
+      "FOLDABLE ARM – Folds flat for travel and dorm rooms.",
+      "EYE-CARING LIGHT – Flicker-free LEDs with no blue-light hazard for long study sessions.",
+      "AUTO-OFF TIMER – 30/60 minute timer turns the light off when you fall asleep."
+     ],
+     "price": 29.15,
+     "rating": 4.1,
+     "reviews": 1321
+    },
+    {
+     "rank": 5,
+     "asin": "B0DEMO304C488",
+     "brand": "Oakvy",
+     "title": "Oakvy 12W LED Desk Lamp, Auto Timer, Foldable, Memory Function – Gift for Home & Office",
+     "bullets": [
+      "AUTO-OFF TIMER – 30/60 minute timer turns the light off when you fall asleep.",
+      "FOLDABLE ARM – Folds flat for travel and dorm rooms.",
+      "MEMORY FUNCTION – Remembers your last brightness and color setting.",
+      "CLAMP MOUNT – Fits desks up to 2.4in thick and frees up desk space.",
+      "EYE-CARING LIGHT – Flicker-free LEDs with no blue-light hazard for long study sessions."
+     ],
+     "price": 18.99,
+     "rating": 4.4,
+     "reviews": 850
+    },
+    {
+     "rank": 6,
+     "asin": "B0DEMO305C543",
+     "brand": "Nestlyn",
+     "title": "Nestlyn Clamp Mount LED Desk Lamp – 8W, 5 Color Modes, Eye-Caring",
+     "bullets": [
+      "CLAMP MOUNT – Fits desks up to 2.4in thick and frees up desk space.",
+      "5 COLOR MODES – From warm 3000K for reading to cool 6500K for focused work.",
+      "EYE-CARING LIGHT – Flicker-free LEDs with no blue-light hazard for long study sessions.",
+      "WIRELESS CHARGER BASE – 10W Qi pad charges compatible phones.",
+      "AUTO-OFF TIMER – 30/60 minute timer turns the light off when you fall asleep."
+     ],
+     "price": 41.99,
+     "rating": 4.5,
+     "reviews": 752
+    },
+    {
+     "rank": 7,
+     "asin": "B0DEMO306C875",
+     "brand": "Solmira",
+     "title": "Solmira LED Desk Lamp 8W, 5 Color Modes Wireless Charger Lamp with Eye-Caring",
+     "bullets": [
+      "5 COLOR MODES – From warm 3000K for reading to cool 6500K for focused work.",
+      "WIRELESS CHARGER BASE – 10W Qi pad charges compatible phones.",
+      "EYE-CARING LIGHT – Flicker-free LEDs with no blue-light hazard for long study sessions.",
+      "MEMORY FUNCTION – Remembers your last brightness and color setting.",
+      "USB CHARGING PORT – Charge your phone while you work and keep the desk tidy."
+     ],
+     "price": 24.99,
      "rating": 4.3,
-     "reviews": 1671
+     "reviews": 624
+    },
+    {
+     "rank": 8,
+     "asin": "B0DEMO307C799",
+     "brand": "Lumetta",
+     "title": "Lumetta USB Charging Port LED Desk Lamp – 14W, Foldable, Eye-Caring",
+     "bullets": [
+      "USB CHARGING PORT – Charge your phone while you work and keep the desk tidy.",
+      "FOLDABLE ARM – Folds flat for travel and dorm rooms.",
+      "EYE-CARING LIGHT – Flicker-free LEDs with no blue-light hazard for long study sessions.",
+      "MEMORY FUNCTION – Remembers your last brightness and color setting.",
+      "WIRELESS CHARGER BASE – 10W Qi pad charges compatible phones."
+     ],
+     "price": 38.97,
+     "rating": 4.3,
+     "reviews": 598
+    },
+    {
+     "rank": 9,
+     "asin": "B0DEMO308C715",
+     "brand": "Trevalo",
+     "title": "Trevalo LED Desk Lamp 14W, Eye-Caring Clamp Mount Lamp with 5 Color Modes",
+     "bullets": [
+      "EYE-CARING LIGHT – Flicker-free LEDs with no blue-light hazard for long study sessions.",
+      "CLAMP MOUNT – Fits desks up to 2.4in thick and frees up desk space.",
+      "5 COLOR MODES – From warm 3000K for reading to cool 6500K for focused work.",
+      "USB CHARGING PORT – Charge your phone while you work and keep the desk tidy."
+     ],
+     "price": 53.4,
+     "rating": 4.3,
+     "reviews": 54
+    },
+    {
+     "rank": 10,
+     "asin": "B0DEMO309C242",
+     "brand": "Kivora",
+     "title": "Kivora LED Desk Lamp 10W, USB Charging Port Eye-Caring Lamp with Clamp Mount",
+     "bullets": [
+      "USB CHARGING PORT – Charge your phone while you work and keep the desk tidy.",
+      "EYE-CARING LIGHT – Flicker-free LEDs with no blue-light hazard for long study sessions.",
+      "CLAMP MOUNT – Fits desks up to 2.4in thick and frees up desk space.",
+      "MEMORY FUNCTION – Remembers your last brightness and color setting.",
+      "5 COLOR MODES – From warm 3000K for reading to cool 6500K for focused work."
+     ],
+     "price": 31.99,
+     "rating": 4.2,
+     "reviews": 74
+    }
+   ]
+  },
+  {
+   "asin": "B0DEMO7890",
+   "name": "真空压缩收纳袋",
+   "noun": "Vacuum Storage Bags",
+   "category": "Home & Kitchen",
+   "price": 24.99,
+   "features": [
+    "8 pack",
+    "hand pump included",
+    "triple-seal zipper",
+    "reusable"
+   ],
+   "keywords": [
+    {
+     "keyword": "vacuum storage bags",
+     "search_volume": 110000,
+     "rank": 44
+    },
+    {
+     "keyword": "space saver bags",
+     "search_volume": 49500,
+     "rank": null
+    },
+    {
+     "keyword": "jumbo vacuum bags",
+     "search_volume": 22200,
+     "rank": 71
+    },
+    {
+     "keyword": "travel compression bags",
+     "search_volume": 27100,
+     "rank": null
+    },
+    {
+     "keyword": "vacuum seal bags for clothes",
+     "search_volume": 14800,
+     "rank": null
+    },
+    {
+     "keyword": "comforter storage bag",
+     "search_volume": 8100,
+     "rank": 58
+    }
+   ],
+   "competitors": [
+    {
+     "rank": 1,
+     "asin": "B0DEMO400C928",
+     "brand": "Halvo",
+     "title": "Vacuum Storage Bags by Halvo, 12 Pack Double Zip Seal & Jumbo Size Design",
+     "bullets": [
+      "DOUBLE-ZIP SEAL – Two zip tracks keep air out for months.",
+      "JUMBO SIZE – Fits king-size comforters and pillows.",
+      "TRAVEL ROLL-UP BAGS – No pump needed; roll to push air out.",
+      "VARIETY PACK – Mixed jumbo, large and medium sizes."
+     ],
+     "price": 32.75,
+     "rating": 4.5,
+     "reviews": 25763
+    },
+    {
+     "rank": 2,
+     "asin": "B0DEMO401C494",
+     "brand": "Corvane",
+     "title": "Vacuum Storage Bags by Corvane, 6 Pack Variety Pack & Hand Pump Design",
+     "bullets": [
+      "VARIETY PACK – Mixed jumbo, large and medium sizes.",
+      "HAND PUMP INCLUDED – Works without a vacuum, perfect for travel.",
+      "MOISTURE & ODOR PROOF – Keeps bugs, dust and mildew away.",
+      "REUSABLE & DURABLE – Thick PA+PE film resists punctures over many uses."
+     ],
+     "price": 41.99,
+     "rating": 4.6,
+     "reviews": 11313
+    },
+    {
+     "rank": 3,
+     "asin": "B0DEMO402C564",
+     "brand": "Pomaru",
+     "title": "Pomaru 10 Pack Vacuum Storage Bags, Hand Pump, Odor Proof, 80% More Space",
+     "bullets": [
+      "HAND PUMP INCLUDED – Works without a vacuum, perfect for travel.",
+      "MOISTURE & ODOR PROOF – Keeps bugs, dust and mildew away.",
+      "SAVE 80% MORE SPACE – Shrinks comforters and coats to a fraction of their size.",
+      "DOUBLE-ZIP SEAL – Two zip tracks keep air out for months.",
+      "VARIETY PACK – Mixed jumbo, large and medium sizes."
+     ],
+     "price": 33.0,
+     "rating": 4.7,
+     "reviews": 4959
+    },
+    {
+     "rank": 4,
+     "asin": "B0DEMO403C135",
+     "brand": "Solmira",
+     "title": "Solmira 12 Pack Vacuum Storage Bags, 80% More Space, Variety Pack, Travel Bags",
+     "bullets": [
+      "SAVE 80% MORE SPACE – Shrinks comforters and coats to a fraction of their size.",
+      "VARIETY PACK – Mixed jumbo, large and medium sizes.",
+      "TRAVEL ROLL-UP BAGS – No pump needed; roll to push air out.",
+      "JUMBO SIZE – Fits king-size comforters and pillows.",
+      "DOUBLE-ZIP SEAL – Two zip tracks keep air out for months."
+     ],
+     "price": 17.99,
+     "rating": 4.4,
+     "reviews": 4049
+    },
+    {
+     "rank": 5,
+     "asin": "B0DEMO404C646",
+     "brand": "Kivora",
+     "title": "Kivora Odor Proof Vacuum Storage Bags – 8 Pack, Travel Bags, 80% More Space",
+     "bullets": [
+      "MOISTURE & ODOR PROOF – Keeps bugs, dust and mildew away.",
+      "TRAVEL ROLL-UP BAGS – No pump needed; roll to push air out.",
+      "SAVE 80% MORE SPACE – Shrinks comforters and coats to a fraction of their size.",
+      "REUSABLE & DURABLE – Thick PA+PE film resists punctures over many uses.",
+      "DOUBLE-ZIP SEAL – Two zip tracks keep air out for months."
+     ],
+     "price": 33.32,
+     "rating": 4.5,
+     "reviews": 3222
+    },
+    {
+     "rank": 6,
+     "asin": "B0DEMO405C446",
+     "brand": "Nestlyn",
+     "title": "Nestlyn 80% More Space Vacuum Storage Bags – 10 Pack, Double Zip Seal, Hand Pump",
+     "bullets": [
+      "SAVE 80% MORE SPACE – Shrinks comforters and coats to a fraction of their size.",
+      "DOUBLE-ZIP SEAL – Two zip tracks keep air out for months.",
+      "HAND PUMP INCLUDED – Works without a vacuum, perfect for travel.",
+      "REUSABLE & DURABLE – Thick PA+PE film resists punctures over many uses."
+     ],
+     "price": 40.99,
+     "rating": 4.0,
+     "reviews": 1622
+    },
+    {
+     "rank": 7,
+     "asin": "B0DEMO406C129",
+     "brand": "Zentrik",
+     "title": "Zentrik Reusable Vacuum Storage Bags – 6 Pack, Hand Pump, Odor Proof",
+     "bullets": [
+      "REUSABLE & DURABLE – Thick PA+PE film resists punctures over many uses.",
+      "HAND PUMP INCLUDED – Works without a vacuum, perfect for travel.",
+      "MOISTURE & ODOR PROOF – Keeps bugs, dust and mildew away.",
+      "TRAVEL ROLL-UP BAGS – No pump needed; roll to push air out."
+     ],
+     "price": 33.94,
+     "rating": 4.3,
+     "reviews": 868
+    },
+    {
+     "rank": 8,
+     "asin": "B0DEMO407C440",
+     "brand": "Ambrin",
+     "title": "Vacuum Storage Bags by Ambrin, 8 Pack Jumbo Size & Reusable Design",
+     "bullets": [
+      "JUMBO SIZE – Fits king-size comforters and pillows.",
+      "REUSABLE & DURABLE – Thick PA+PE film resists punctures over many uses.",
+      "DOUBLE-ZIP SEAL – Two zip tracks keep air out for months.",
+      "MOISTURE & ODOR PROOF – Keeps bugs, dust and mildew away.",
+      "HAND PUMP INCLUDED – Works without a vacuum, perfect for travel."
+     ],
+     "price": 31.99,
+     "rating": 4.3,
+     "reviews": 845
+    },
+    {
+     "rank": 9,
+     "asin": "B0DEMO408C895",
+     "brand": "Marvessa",
+     "title": "Marvessa 12 Pack Vacuum Storage Bags, 80% More Space, Variety Pack, Double Zip Seal",
+     "bullets": [
+      "SAVE 80% MORE SPACE – Shrinks comforters and coats to a fraction of their size.",
+      "VARIETY PACK – Mixed jumbo, large and medium sizes.",
+      "DOUBLE-ZIP SEAL – Two zip tracks keep air out for months.",
+      "REUSABLE & DURABLE – Thick PA+PE film resists punctures over many uses."
+     ],
+     "price": 16.99,
+     "rating": 4.2,
+     "reviews": 49
+    },
+    {
+     "rank": 10,
+     "asin": "B0DEMO409C603",
+     "brand": "Lumetta",
+     "title": "Vacuum Storage Bags by Lumetta, 10 Pack Jumbo Size & 80% More Space Design",
+     "bullets": [
+      "JUMBO SIZE – Fits king-size comforters and pillows.",
+      "SAVE 80% MORE SPACE – Shrinks comforters and coats to a fraction of their size.",
+      "REUSABLE & DURABLE – Thick PA+PE film resists punctures over many uses.",
+      "DOUBLE-ZIP SEAL – Two zip tracks keep air out for months.",
+      "VARIETY PACK – Mixed jumbo, large and medium sizes."
+     ],
+     "price": 41.99,
+     "rating": 4.2,
+     "reviews": 95
+    }
+   ]
+  },
+  {
+   "asin": "B0DEMO2468",
+   "name": "车载手机支架",
+   "noun": "Car Phone Mount",
+   "category": "Cell Phone Accessories",
+   "price": 19.99,
+   "features": [
+    "magnetic",
+    "dashboard & vent",
+    "360° rotation",
+    "one-hand use"
+   ],
+   "keywords": [
+    {
+     "keyword": "car phone holder",
+     "search_volume": 201000,
+     "rank": 83
+    },
+    {
+     "keyword": "magnetic phone mount",
+     "search_volume": 60500,
+     "rank": null
+    },
+    {
+     "keyword": "phone holder for car vent",
+     "search_volume": 33100,
+     "rank": 46
+    },
+    {
+     "keyword": "dashboard phone mount",
+     "search_volume": 18100,
+     "rank": null
+    },
+    {
+     "keyword": "car mount for iphone",
+     "search_volume": 27100,
+     "rank": null
+    },
+    {
+     "keyword": "phone holder for truck",
+     "search_volume": 6600,
+     "rank": 29
+    }
+   ],
+   "competitors": [
+    {
+     "rank": 1,
+     "asin": "B0DEMO500C742",
+     "brand": "Fenwyr",
+     "title": "Fenwyr Car Phone Mount Vent, 360° Rotation One-Hand Mount with Suction Cup",
+     "bullets": [
+      "360° ROTATION – Switch between portrait and landscape for navigation.",
+      "ONE-HAND OPERATION – Snap on and off in a second.",
+      "STRONG SUCTION – Sticky gel pad holds on textured dashboards.",
+      "UNIVERSAL FIT – Works with 4–7in phones."
+     ],
+     "price": 32.99,
+     "rating": 4.2,
+     "reviews": 11455
+    },
+    {
+     "rank": 2,
+     "asin": "B0DEMO501C997",
+     "brand": "Marvessa",
+     "title": "Marvessa Car Phone Mount Dash, Strong Magnet 360° Rotation Mount with Wireless Charging",
+     "bullets": [
+      "N52 STRONG MAGNET – Holds phones steady on bumpy roads, even with a case.",
+      "360° ROTATION – Switch between portrait and landscape for navigation.",
+      "15W WIRELESS CHARGING – Charges while you drive.",
+      "STRONG SUCTION – Sticky gel pad holds on textured dashboards.",
+      "UNIVERSAL FIT – Works with 4–7in phones."
+     ],
+     "price": 31.99,
+     "rating": 4.7,
+     "reviews": 3567
+    },
+    {
+     "rank": 3,
+     "asin": "B0DEMO502C546",
+     "brand": "Corvane",
+     "title": "Corvane Car Phone Mount Dash, Vent Clip Wireless Charging Mount with One-Hand",
+     "bullets": [
+      "UPGRADED VENT CLIP – Hook design will not slip or break the vent.",
+      "15W WIRELESS CHARGING – Charges while you drive.",
+      "ONE-HAND OPERATION – Snap on and off in a second.",
+      "UNIVERSAL FIT – Works with 4–7in phones.",
+      "360° ROTATION – Switch between portrait and landscape for navigation."
+     ],
+     "price": 29.99,
+     "rating": 4.5,
+     "reviews": 2694
+    },
+    {
+     "rank": 4,
+     "asin": "B0DEMO503C439",
+     "brand": "Trevalo",
+     "title": "Car Phone Mount by Trevalo, Cup Holder One-Hand & Wireless Charging Design",
+     "bullets": [
+      "ONE-HAND OPERATION – Snap on and off in a second.",
+      "15W WIRELESS CHARGING – Charges while you drive.",
+      "360° ROTATION – Switch between portrait and landscape for navigation.",
+      "N52 STRONG MAGNET – Holds phones steady on bumpy roads, even with a case.",
+      "STRONG SUCTION – Sticky gel pad holds on textured dashboards."
+     ],
+     "price": 39.99,
+     "rating": 4.4,
+     "reviews": 2560
+    },
+    {
+     "rank": 5,
+     "asin": "B0DEMO504C698",
+     "brand": "Zentrik",
+     "title": "Zentrik Strong Magnet Car Phone Mount – Vent, Universal Fit, 360° Rotation",
+     "bullets": [
+      "N52 STRONG MAGNET – Holds phones steady on bumpy roads, even with a case.",
+      "UNIVERSAL FIT – Works with 4–7in phones.",
+      "360° ROTATION – Switch between portrait and landscape for navigation.",
+      "15W WIRELESS CHARGING – Charges while you drive."
+     ],
+     "price": 29.09,
+     "rating": 4.4,
+     "reviews": 2226
+    },
+    {
+     "rank": 6,
+     "asin": "B0DEMO505C958",
+     "brand": "Tobrin",
+     "title": "Tobrin Extendable Arm Car Phone Mount – Dash, One-Hand, Strong Magnet",
+     "bullets": [
+      "EXTENDABLE ARM – Telescopic arm brings the phone closer to you.",
+      "ONE-HAND OPERATION – Snap on and off in a second.",
+      "N52 STRONG MAGNET – Holds phones steady on bumpy roads, even with a case.",
+      "STRONG SUCTION – Sticky gel pad holds on textured dashboards."
+     ],
+     "price": 9.98,
+     "rating": 4.1,
+     "reviews": 1691
+    },
+    {
+     "rank": 7,
+     "asin": "B0DEMO506C573",
+     "brand": "Pomaru",
+     "title": "Pomaru Car Phone Mount Windshield, Strong Magnet Universal Fit Mount with Vent Clip",
+     "bullets": [
+      "N52 STRONG MAGNET – Holds phones steady on bumpy roads, even with a case.",
+      "UNIVERSAL FIT – Works with 4–7in phones.",
+      "UPGRADED VENT CLIP – Hook design will not slip or break the vent.",
+      "EXTENDABLE ARM – Telescopic arm brings the phone closer to you."
+     ],
+     "price": 22.69,
+     "rating": 4.2,
+     "reviews": 1171
+    },
+    {
+     "rank": 8,
+     "asin": "B0DEMO507C959",
+     "brand": "Lumetta",
+     "title": "Lumetta Cup Holder Car Phone Mount, 360° Rotation, Strong Magnet, Universal Fit",
+     "bullets": [
+      "360° ROTATION – Switch between portrait and landscape for navigation.",
+      "N52 STRONG MAGNET – Holds phones steady on bumpy roads, even with a case.",
+      "UNIVERSAL FIT – Works with 4–7in phones.",
+      "EXTENDABLE ARM – Telescopic arm brings the phone closer to you."
+     ],
+     "price": 21.99,
+     "rating": 4.3,
+     "reviews": 847
+    },
+    {
+     "rank": 9,
+     "asin": "B0DEMO508C943",
+     "brand": "Oakvy",
+     "title": "Oakvy Universal Fit Car Phone Mount – Dash, Strong Magnet, Vent Clip",
+     "bullets": [
+      "UNIVERSAL FIT – Works with 4–7in phones.",
+      "N52 STRONG MAGNET – Holds phones steady on bumpy roads, even with a case.",
+      "UPGRADED VENT CLIP – Hook design will not slip or break the vent.",
+      "STRONG SUCTION – Sticky gel pad holds on textured dashboards."
+     ],
+     "price": 10.46,
+     "rating": 4.1,
+     "reviews": 84
+    },
+    {
+     "rank": 10,
+     "asin": "B0DEMO509C230",
+     "brand": "Kivora",
+     "title": "Car Phone Mount by Kivora, Dash Universal Fit & Suction Cup Design",
+     "bullets": [
+      "UNIVERSAL FIT – Works with 4–7in phones.",
+      "STRONG SUCTION – Sticky gel pad holds on textured dashboards.",
+      "UPGRADED VENT CLIP – Hook design will not slip or break the vent.",
+      "360° ROTATION – Switch between portrait and landscape for navigation.",
+      "EXTENDABLE ARM – Telescopic arm brings the phone closer to you."
+     ],
+     "price": 18.99,
+     "rating": 4.3,
+     "reviews": 37
     }
    ]
   }
