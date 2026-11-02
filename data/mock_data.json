@@ -1,0 +1,594 @@
+{
+ "_note": "示例数据（模拟），所有数字均为虚构，仅用于面试演示",
+ "datasets": {
+  "mock_data.json": "模拟数据 mock_data.json"
+ },
+ "products": [
+  {
+   "asin": "B0DEMO1234",
+   "name": "便携式咖啡杯",
+   "noun": "Travel Coffee Mug",
+   "category": "Kitchen & Dining",
+   "price": 22.99,
+   "features": [
+    "16oz",
+    "stainless steel",
+    "double-wall vacuum",
+    "twist-lock lid"
+   ],
+   "keywords": [
+    {
+     "keyword": "travel coffee mug",
+     "search_volume": 48000,
+     "rank": 23
+    },
+    {
+     "keyword": "insulated tumbler",
+     "search_volume": 61000,
+     "rank": null
+    },
+    {
+     "keyword": "leak proof coffee cup",
+     "search_volume": 12500,
+     "rank": 41
+    },
+    {
+     "keyword": "thermos cup",
+     "search_volume": 33000,
+     "rank": 58
+    },
+    {
+     "keyword": "spill proof mug",
+     "search_volume": 8200,
+     "rank": null
+    },
+    {
+     "keyword": "office coffee cup",
+     "search_volume": 5400,
+     "rank": 77
+    }
+   ],
+   "competitors": [
+    {
+     "rank": 1,
+     "asin": "B0COMP123400",
+     "title": "Vela Travel Coffee Mug – Tumbler, Leak-Proof, Spill Proof for Insulated",
+     "bullets": [
+      "TUMBLER – designed for daily use with leak-proof.",
+      "LEAK-PROOF – designed for daily use with tumbler.",
+      "SPILL PROOF – designed for daily use with insulated.",
+      "INSULATED – designed for daily use with spill proof.",
+      "WHAT YOU GET – 1 x travel coffee mug, user guide."
+     ],
+     "price": 17.72,
+     "rating": 4.3,
+     "reviews": 86
+    },
+    {
+     "rank": 2,
+     "asin": "B0COMP123401",
+     "title": "Orca Travel Coffee Mug – Leak-Proof, Car Cup Holder, Insulated for Hot & Cold",
+     "bullets": [
+      "LEAK-PROOF – designed for daily use with insulated.",
+      "CAR CUP HOLDER – designed for daily use with leak-proof.",
+      "INSULATED – designed for daily use with spill proof.",
+      "HOT & COLD – designed for daily use with insulated.",
+      "WHAT YOU GET – 1 x travel coffee mug, user guide."
+     ],
+     "price": 24.54,
+     "rating": 4.3,
+     "reviews": 74
+    },
+    {
+     "rank": 3,
+     "asin": "B0COMP123402",
+     "title": "Pluto Travel Coffee Mug – Spill Proof, Insulated, Hot & Cold for Leak-Proof",
+     "bullets": [
+      "SPILL PROOF – designed for daily use with stainless steel.",
+      "INSULATED – designed for daily use with travel mug.",
+      "HOT & COLD – designed for daily use with leak-proof.",
+      "LEAK-PROOF – designed for daily use with hot & cold.",
+      "WHAT YOU GET – 1 x travel coffee mug, user guide."
+     ],
+     "price": 24.33,
+     "rating": 4.5,
+     "reviews": 91
+    },
+    {
+     "rank": 4,
+     "asin": "B0COMP123403",
+     "title": "Vela Travel Coffee Mug – Leak-Proof, Hot & Cold, Stainless Steel for Car Cup Holder",
+     "bullets": [
+      "LEAK-PROOF – designed for daily use with leak-proof.",
+      "HOT & COLD – designed for daily use with insulated.",
+      "STAINLESS STEEL – designed for daily use with spill proof.",
+      "CAR CUP HOLDER – designed for daily use with car cup holder.",
+      "WHAT YOU GET – 1 x travel coffee mug, user guide."
+     ],
+     "price": 25.85,
+     "rating": 4.3,
+     "reviews": 1565
+    },
+    {
+     "rank": 5,
+     "asin": "B0COMP123404",
+     "title": "Pluto Travel Coffee Mug – Tumbler, Spill Proof, Hot & Cold for Stainless Steel",
+     "bullets": [
+      "TUMBLER – designed for daily use with spill proof.",
+      "SPILL PROOF – designed for daily use with travel mug.",
+      "HOT & COLD – designed for daily use with spill proof.",
+      "STAINLESS STEEL – designed for daily use with leak-proof.",
+      "WHAT YOU GET – 1 x travel coffee mug, user guide."
+     ],
+     "price": 24.51,
+     "rating": 4.4,
+     "reviews": 1521
+    },
+    {
+     "rank": 6,
+     "asin": "B0COMP123405",
+     "title": "Vela Travel Coffee Mug – Tumbler, Car Cup Holder, Spill Proof for Travel Mug",
+     "bullets": [
+      "TUMBLER – designed for daily use with leak-proof.",
+      "CAR CUP HOLDER – designed for daily use with stainless steel.",
+      "SPILL PROOF – designed for daily use with travel mug.",
+      "TRAVEL MUG – designed for daily use with tumbler.",
+      "WHAT YOU GET – 1 x travel coffee mug, user guide."
+     ],
+     "price": 19.16,
+     "rating": 4.3,
+     "reviews": 2534
+    },
+    {
+     "rank": 7,
+     "asin": "B0COMP123406",
+     "title": "Zest Travel Coffee Mug – Insulated, Tumbler, Car Cup Holder for Hot & Cold",
+     "bullets": [
+      "INSULATED – designed for daily use with tumbler.",
+      "TUMBLER – designed for daily use with tumbler.",
+      "CAR CUP HOLDER – designed for daily use with car cup holder.",
+      "HOT & COLD – designed for daily use with car cup holder.",
+      "WHAT YOU GET – 1 x travel coffee mug, user guide."
+     ],
+     "price": 18.11,
+     "rating": 4.0,
+     "reviews": 2387
+    },
+    {
+     "rank": 8,
+     "asin": "B0COMP123407",
+     "title": "Pluto Travel Coffee Mug – Hot & Cold, Spill Proof, Tumbler for Insulated",
+     "bullets": [
+      "HOT & COLD – designed for daily use with car cup holder.",
+      "SPILL PROOF – designed for daily use with hot & cold.",
+      "TUMBLER – designed for daily use with stainless steel.",
+      "INSULATED – designed for daily use with tumbler.",
+      "WHAT YOU GET – 1 x travel coffee mug, user guide."
+     ],
+     "price": 17.53,
+     "rating": 4.3,
+     "reviews": 288
+    },
+    {
+     "rank": 9,
+     "asin": "B0COMP123408",
+     "title": "Mira Travel Coffee Mug – Travel Mug, Hot & Cold, Insulated for Spill Proof",
+     "bullets": [
+      "TRAVEL MUG – designed for daily use with hot & cold.",
+      "HOT & COLD – designed for daily use with travel mug.",
+      "INSULATED – designed for daily use with spill proof.",
+      "SPILL PROOF – designed for daily use with stainless steel.",
+      "WHAT YOU GET – 1 x travel coffee mug, user guide."
+     ],
+     "price": 22.19,
+     "rating": 4.7,
+     "reviews": 281
+    },
+    {
+     "rank": 10,
+     "asin": "B0COMP123409",
+     "title": "Pluto Travel Coffee Mug – Leak-Proof, Car Cup Holder, Spill Proof for Tumbler",
+     "bullets": [
+      "LEAK-PROOF – designed for daily use with travel mug.",
+      "CAR CUP HOLDER – designed for daily use with stainless steel.",
+      "SPILL PROOF – designed for daily use with hot & cold.",
+      "TUMBLER – designed for daily use with stainless steel.",
+      "WHAT YOU GET – 1 x travel coffee mug, user guide."
+     ],
+     "price": 29.72,
+     "rating": 4.5,
+     "reviews": 2290
+    }
+   ]
+  },
+  {
+   "asin": "B0DEMO5678",
+   "name": "瑜伽垫",
+   "noun": "Yoga Mat",
+   "category": "Sports & Outdoors",
+   "price": 29.99,
+   "features": [
+    "6mm thick",
+    "TPE",
+    "non-slip texture",
+    "carry strap"
+   ],
+   "keywords": [
+    {
+     "keyword": "yoga mat",
+     "search_volume": 210000,
+     "rank": 64
+    },
+    {
+     "keyword": "thick yoga mat",
+     "search_volume": 40500,
+     "rank": 32
+    },
+    {
+     "keyword": "non slip yoga mat",
+     "search_volume": 27100,
+     "rank": null
+    },
+    {
+     "keyword": "exercise mat",
+     "search_volume": 90500,
+     "rank": 88
+    },
+    {
+     "keyword": "pilates mat",
+     "search_volume": 22000,
+     "rank": null
+    },
+    {
+     "keyword": "tpe yoga mat",
+     "search_volume": 6600,
+     "rank": 19
+    }
+   ],
+   "competitors": [
+    {
+     "rank": 1,
+     "asin": "B0COMP567800",
+     "title": "Kino Yoga Mat – Workout, Extra Thick, Alignment Lines for Non-Slip",
+     "bullets": [
+      "WORKOUT – designed for daily use with eco friendly.",
+      "EXTRA THICK – designed for daily use with exercise mat.",
+      "ALIGNMENT LINES – designed for daily use with exercise mat.",
+      "NON-SLIP – designed for daily use with non-slip.",
+      "WHAT YOU GET – 1 x yoga mat, user guide."
+     ],
+     "price": 30.49,
+     "rating": 4.4,
+     "reviews": 5200
+    },
+    {
+     "rank": 2,
+     "asin": "B0COMP567801",
+     "title": "Orca Yoga Mat – Pilates, Eco Friendly, Non-Slip for Extra Thick",
+     "bullets": [
+      "PILATES – designed for daily use with carry strap.",
+      "ECO FRIENDLY – designed for daily use with carry strap.",
+      "NON-SLIP – designed for daily use with eco friendly.",
+      "EXTRA THICK – designed for daily use with non-slip.",
+      "WHAT YOU GET – 1 x yoga mat, user guide."
+     ],
+     "price": 30.02,
+     "rating": 4.7,
+     "reviews": 3100
+    },
+    {
+     "rank": 3,
+     "asin": "B0COMP567802",
+     "title": "Vela Yoga Mat – Workout, Exercise Mat, Alignment Lines for Carry Strap",
+     "bullets": [
+      "WORKOUT – designed for daily use with alignment lines.",
+      "EXERCISE MAT – designed for daily use with workout.",
+      "ALIGNMENT LINES – designed for daily use with non-slip.",
+      "CARRY STRAP – designed for daily use with exercise mat.",
+      "WHAT YOU GET – 1 x yoga mat, user guide."
+     ],
+     "price": 23.6,
+     "rating": 4.1,
+     "reviews": 1450
+    },
+    {
+     "rank": 4,
+     "asin": "B0COMP567803",
+     "title": "Vela Yoga Mat – Eco Friendly, Non-Slip, Alignment Lines for Pilates",
+     "bullets": [
+      "ECO FRIENDLY – designed for daily use with non-slip.",
+      "NON-SLIP – designed for daily use with eco friendly.",
+      "ALIGNMENT LINES – designed for daily use with extra thick.",
+      "PILATES – designed for daily use with carry strap.",
+      "WHAT YOU GET – 1 x yoga mat, user guide."
+     ],
+     "price": 32.62,
+     "rating": 4.0,
+     "reviews": 255
+    },
+    {
+     "rank": 5,
+     "asin": "B0COMP567804",
+     "title": "Pluto Yoga Mat – Exercise Mat, Pilates, Alignment Lines for Extra Thick",
+     "bullets": [
+      "EXERCISE MAT – designed for daily use with carry strap.",
+      "PILATES – designed for daily use with carry strap.",
+      "ALIGNMENT LINES – designed for daily use with alignment lines.",
+      "EXTRA THICK – designed for daily use with extra thick.",
+      "WHAT YOU GET – 1 x yoga mat, user guide."
+     ],
+     "price": 24.4,
+     "rating": 4.3,
+     "reviews": 2638
+    },
+    {
+     "rank": 6,
+     "asin": "B0COMP567805",
+     "title": "Kino Yoga Mat – Alignment Lines, Exercise Mat, Workout for Eco Friendly",
+     "bullets": [
+      "ALIGNMENT LINES – designed for daily use with extra thick.",
+      "EXERCISE MAT – designed for daily use with carry strap.",
+      "WORKOUT – designed for daily use with pilates.",
+      "ECO FRIENDLY – designed for daily use with alignment lines.",
+      "WHAT YOU GET – 1 x yoga mat, user guide."
+     ],
+     "price": 36.16,
+     "rating": 4.0,
+     "reviews": 391
+    },
+    {
+     "rank": 7,
+     "asin": "B0COMP567806",
+     "title": "Aurora Yoga Mat – Non-Slip, Extra Thick, Pilates for Eco Friendly",
+     "bullets": [
+      "NON-SLIP – designed for daily use with pilates.",
+      "EXTRA THICK – designed for daily use with extra thick.",
+      "PILATES – designed for daily use with pilates.",
+      "ECO FRIENDLY – designed for daily use with carry strap.",
+      "WHAT YOU GET – 1 x yoga mat, user guide."
+     ],
+     "price": 37.47,
+     "rating": 4.2,
+     "reviews": 640
+    },
+    {
+     "rank": 8,
+     "asin": "B0COMP567807",
+     "title": "Mira Yoga Mat – Exercise Mat, Pilates, Workout for Carry Strap",
+     "bullets": [
+      "EXERCISE MAT – designed for daily use with exercise mat.",
+      "PILATES – designed for daily use with exercise mat.",
+      "WORKOUT – designed for daily use with workout.",
+      "CARRY STRAP – designed for daily use with exercise mat.",
+      "WHAT YOU GET – 1 x yoga mat, user guide."
+     ],
+     "price": 25.79,
+     "rating": 4.3,
+     "reviews": 1390
+    },
+    {
+     "rank": 9,
+     "asin": "B0COMP567808",
+     "title": "Mira Yoga Mat – Non-Slip, Alignment Lines, Eco Friendly for Exercise Mat",
+     "bullets": [
+      "NON-SLIP – designed for daily use with carry strap.",
+      "ALIGNMENT LINES – designed for daily use with alignment lines.",
+      "ECO FRIENDLY – designed for daily use with carry strap.",
+      "EXERCISE MAT – designed for daily use with carry strap.",
+      "WHAT YOU GET – 1 x yoga mat, user guide."
+     ],
+     "price": 23.82,
+     "rating": 4.0,
+     "reviews": 1101
+    },
+    {
+     "rank": 10,
+     "asin": "B0COMP567809",
+     "title": "Aurora Yoga Mat – Alignment Lines, Extra Thick, Eco Friendly for Workout",
+     "bullets": [
+      "ALIGNMENT LINES – designed for daily use with alignment lines.",
+      "EXTRA THICK – designed for daily use with carry strap.",
+      "ECO FRIENDLY – designed for daily use with extra thick.",
+      "WORKOUT – designed for daily use with extra thick.",
+      "WHAT YOU GET – 1 x yoga mat, user guide."
+     ],
+     "price": 37.5,
+     "rating": 4.6,
+     "reviews": 2016
+    }
+   ]
+  },
+  {
+   "asin": "B0DEMO9012",
+   "name": "宠物饮水机",
+   "noun": "Pet Water Fountain",
+   "category": "Pet Supplies",
+   "price": 35.99,
+   "features": [
+    "2L tank",
+    "ultra quiet pump",
+    "carbon filter",
+    "LED water level"
+   ],
+   "keywords": [
+    {
+     "keyword": "cat water fountain",
+     "search_volume": 135000,
+     "rank": 47
+    },
+    {
+     "keyword": "pet water fountain",
+     "search_volume": 74000,
+     "rank": 29
+    },
+    {
+     "keyword": "quiet cat fountain",
+     "search_volume": 9900,
+     "rank": null
+    },
+    {
+     "keyword": "dog water dispenser",
+     "search_volume": 18100,
+     "rank": 66
+    },
+    {
+     "keyword": "water fountain filter",
+     "search_volume": 12100,
+     "rank": null
+    }
+   ],
+   "competitors": [
+    {
+     "rank": 1,
+     "asin": "B0COMP901200",
+     "title": "Zest Pet Water Fountain – Dog, Led, Quiet for Dishwasher Safe",
+     "bullets": [
+      "DOG – designed for daily use with quiet.",
+      "LED – designed for daily use with dishwasher safe.",
+      "QUIET – designed for daily use with LED.",
+      "DISHWASHER SAFE – designed for daily use with dishwasher safe.",
+      "WHAT YOU GET – 1 x pet water fountain, user guide."
+     ],
+     "price": 41.71,
+     "rating": 4.0,
+     "reviews": 380
+    },
+    {
+     "rank": 2,
+     "asin": "B0COMP901201",
+     "title": "Kino Pet Water Fountain – Filter, Quiet, Dishwasher Safe for Cat Water Fountain",
+     "bullets": [
+      "FILTER – designed for daily use with LED.",
+      "QUIET – designed for daily use with filter.",
+      "DISHWASHER SAFE – designed for daily use with LED.",
+      "CAT WATER FOUNTAIN – designed for daily use with BPA free.",
+      "WHAT YOU GET – 1 x pet water fountain, user guide."
+     ],
+     "price": 30.08,
+     "rating": 4.4,
+     "reviews": 240
+    },
+    {
+     "rank": 3,
+     "asin": "B0COMP901202",
+     "title": "Kino Pet Water Fountain – Cat Water Fountain, Led, Bpa Free for Dishwasher Safe",
+     "bullets": [
+      "CAT WATER FOUNTAIN – designed for daily use with dishwasher safe.",
+      "LED – designed for daily use with dog.",
+      "BPA FREE – designed for daily use with dog.",
+      "DISHWASHER SAFE – designed for daily use with cat water fountain.",
+      "WHAT YOU GET – 1 x pet water fountain, user guide."
+     ],
+     "price": 31.98,
+     "rating": 4.2,
+     "reviews": 610
+    },
+    {
+     "rank": 4,
+     "asin": "B0COMP901203",
+     "title": "Orca Pet Water Fountain – Dog, Dishwasher Safe, Automatic for Filter",
+     "bullets": [
+      "DOG – designed for daily use with filter.",
+      "DISHWASHER SAFE – designed for daily use with cat water fountain.",
+      "AUTOMATIC – designed for daily use with BPA free.",
+      "FILTER – designed for daily use with LED.",
+      "WHAT YOU GET – 1 x pet water fountain, user guide."
+     ],
+     "price": 40.11,
+     "rating": 4.6,
+     "reviews": 1102
+    },
+    {
+     "rank": 5,
+     "asin": "B0COMP901204",
+     "title": "Kino Pet Water Fountain – Dishwasher Safe, Led, Automatic for Quiet",
+     "bullets": [
+      "DISHWASHER SAFE – designed for daily use with cat water fountain.",
+      "LED – designed for daily use with LED.",
+      "AUTOMATIC – designed for daily use with filter.",
+      "QUIET – designed for daily use with cat water fountain.",
+      "WHAT YOU GET – 1 x pet water fountain, user guide."
+     ],
+     "price": 42.35,
+     "rating": 4.0,
+     "reviews": 2218
+    },
+    {
+     "rank": 6,
+     "asin": "B0COMP901205",
+     "title": "Aurora Pet Water Fountain – Filter, Dog, Automatic for Cat Water Fountain",
+     "bullets": [
+      "FILTER – designed for daily use with BPA free.",
+      "DOG – designed for daily use with LED.",
+      "AUTOMATIC – designed for daily use with quiet.",
+      "CAT WATER FOUNTAIN – designed for daily use with cat water fountain.",
+      "WHAT YOU GET – 1 x pet water fountain, user guide."
+     ],
+     "price": 31.91,
+     "rating": 4.1,
+     "reviews": 2319
+    },
+    {
+     "rank": 7,
+     "asin": "B0COMP901206",
+     "title": "Vela Pet Water Fountain – Quiet, Automatic, Dog for Dishwasher Safe",
+     "bullets": [
+      "QUIET – designed for daily use with LED.",
+      "AUTOMATIC – designed for daily use with BPA free.",
+      "DOG – designed for daily use with dog.",
+      "DISHWASHER SAFE – designed for daily use with automatic.",
+      "WHAT YOU GET – 1 x pet water fountain, user guide."
+     ],
+     "price": 35.95,
+     "rating": 4.4,
+     "reviews": 154
+    },
+    {
+     "rank": 8,
+     "asin": "B0COMP901207",
+     "title": "Pluto Pet Water Fountain – Led, Automatic, Quiet for Dishwasher Safe",
+     "bullets": [
+      "LED – designed for daily use with dog.",
+      "AUTOMATIC – designed for daily use with LED.",
+      "QUIET – designed for daily use with filter.",
+      "DISHWASHER SAFE – designed for daily use with dishwasher safe.",
+      "WHAT YOU GET – 1 x pet water fountain, user guide."
+     ],
+     "price": 29.4,
+     "rating": 4.3,
+     "reviews": 3630
+    },
+    {
+     "rank": 9,
+     "asin": "B0COMP901208",
+     "title": "Mira Pet Water Fountain – Quiet, Bpa Free, Led for Dog",
+     "bullets": [
+      "QUIET – designed for daily use with automatic.",
+      "BPA FREE – designed for daily use with quiet.",
+      "LED – designed for daily use with filter.",
+      "DOG – designed for daily use with BPA free.",
+      "WHAT YOU GET – 1 x pet water fountain, user guide."
+     ],
+     "price": 29.82,
+     "rating": 4.7,
+     "reviews": 339
+    },
+    {
+     "rank": 10,
+     "asin": "B0COMP901209",
+     "title": "Lumi Pet Water Fountain – Led, Quiet, Bpa Free for Cat Water Fountain",
+     "bullets": [
+      "LED – designed for daily use with filter.",
+      "QUIET – designed for daily use with dog.",
+      "BPA FREE – designed for daily use with filter.",
+      "CAT WATER FOUNTAIN – designed for daily use with dishwasher safe.",
+      "WHAT YOU GET – 1 x pet water fountain, user guide."
+     ],
+     "price": 46.67,
+     "rating": 4.3,
+     "reviews": 1671
+    }
+   ]
+  }
+ ]
+}
