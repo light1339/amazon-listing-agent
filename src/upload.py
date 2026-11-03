@@ -1,11 +1,11 @@
 """上传文件解析（内存中完成，不落盘）。支持 .json（同 mock_data.json）、.csv、.xlsx（扁平表，见 COLUMNS）。"""
 import csv,io,json,re,zipfile
 MAX_BYTES=2*1024*1024; MAX_PRODUCTS=50; MAX_COMPS=20; MAX_STR=500
-COLUMNS=["asin","name","noun","category","price","features","keywords","comp_rank","comp_asin","comp_brand","comp_title","comp_price","comp_rating","comp_reviews","comp_bullets"]
-HELP={"asin":"商品 ASIN（必填，4–20 位字母数字）","name":"商品中文名","noun":"英文品名（必填）","category":"类目","price":"售价（数字）",
+COLUMNS=["asin","name","noun","category","price","cost","fee_rate","cvr","features","keywords","comp_rank","comp_asin","comp_brand","comp_title","comp_price","comp_rating","comp_reviews","comp_bullets"]
+HELP={"asin":"商品 ASIN（必填，4–20 位字母数字）","name":"商品中文名","noun":"英文品名（必填）","category":"类目","price":"售价（数字）","cost":"进货成本 $（可选，0≤成本<售价×5；空=按售价 30% 示例假设）","fee_rate":"平台佣金+配送费占售价比例（可选，0–0.8，如 0.3；空=0.30 示例假设）","cvr":"预计点击转化率（可选，0.01–0.5，如 0.1；空=0.10 示例假设）",
  "features":"卖点，| 分隔，至少 3 个","keywords":"关键词:搜索量:排名，| 分隔，排名可空，如 travel mug:48000:23|thermos cup:33000:",
  "comp_rank":"竞品排名（整数）","comp_asin":"竞品 ASIN","comp_brand":"竞品品牌（可选，如 Trevalo；页面显示为 品牌+品类；旧文件无此列也可上传）","comp_title":"竞品标题","comp_price":"竞品价格","comp_rating":"竞品评分 0–5","comp_reviews":"竞品评论数（整数）","comp_bullets":"竞品五点，| 分隔"}
-OPTIONAL={"comp_brand"}
+OPTIONAL={"comp_brand","cost","fee_rate","cvr"}
 class Bad(Exception): pass
 ID=re.compile(r"^[A-Za-z0-9]{4,20}$")
 def _s(v,f,req=True):
@@ -43,10 +43,13 @@ def _norm(p,where):
                 "bullets":[_s(b,"comp_bullets 项") for b in (c.get("bullets") or []) if str(b).strip()][:10],
                 "price":_n(c.get("price"),"comp_price",float,0,1e6),"rating":_n(c.get("rating"),"comp_rating",float,0,5),"reviews":_n(c.get("reviews"),"comp_reviews",int,0,1e9)})
         if not comps: raise Bad("至少需要 1 个竞品")
+        _price=_n(p.get("price"),"price",float,0,1e6); _cost=_n(p.get("cost"),"cost",float,0,5e6,allow_none=True)
+        if _cost is not None and _cost>_price*5+0.01: raise Bad("cost 超出范围：不应超过售价的 5 倍")
         if len(comps)>MAX_COMPS: raise Bad(f"竞品最多 {MAX_COMPS} 个")
         comps.sort(key=lambda c:c["rank"])
         return {"asin":asin,"name":_s(p.get("name"),"name",False) or asin,"noun":_s(p.get("noun"),"noun"),"category":_s(p.get("category"),"category",False) or "General",
-                "price":_n(p.get("price"),"price",float,0,1e6),"features":feats[:10],"keywords":kws[:30],"competitors":comps}
+                "price":_n(p.get("price"),"price",float,0,1e6),
+                "cost":_n(p.get("cost"),"cost",float,0,5e6,allow_none=True),"fee_rate":_n(p.get("fee_rate"),"fee_rate",float,0,0.8,allow_none=True),"cvr":_n(p.get("cvr"),"cvr",float,0.01,0.5,allow_none=True),"features":feats[:10],"keywords":kws[:30],"competitors":comps}
     except Bad as e: raise Bad(f"{where}：{e}")
 def _split(v): return [x.strip() for x in str(v or "").split("|") if x.strip()]
 def _rows_to_products(rows):
@@ -67,7 +70,7 @@ def _rows_to_products(rows):
                 parts=k.rsplit(":",2)
                 if len(parts)!=3: raise Bad(f"第 {n} 行：keywords 格式应为 关键词:搜索量:排名，收到 {k[:40]}")
                 kws.append({"keyword":parts[0],"search_volume":parts[1],"rank":parts[2]})
-            prods[a]={"asin":a,"name":g("name"),"noun":g("noun"),"category":g("category"),"price":g("price"),"features":_split(g("features")),"keywords":kws,"competitors":[],"_row":n}
+            prods[a]={"asin":a,"name":g("name"),"noun":g("noun"),"category":g("category"),"price":g("price"),"cost":g("cost"),"fee_rate":g("fee_rate"),"cvr":g("cvr"),"features":_split(g("features")),"keywords":kws,"competitors":[],"_row":n}
             order.append(a)
         if str(g("comp_asin") or "").strip():
             if len(prods[a]["competitors"])>=MAX_COMPS: raise Bad(f"第 {n} 行：商品 {a} 竞品超过 {MAX_COMPS} 个")
@@ -117,7 +120,8 @@ def flat_rows(products):
     for p in products:
         kw="|".join(f'{k["keyword"]}:{k["search_volume"] if k["search_volume"] is not None else ""}:{k["rank"] if k["rank"] is not None else ""}' for k in p["keywords"])
         for i,c in enumerate(p["competitors"]):
-            base=[p["asin"],p["name"],p["noun"],p["category"],p["price"],"|".join(p["features"]),kw] if i==0 else [p["asin"]]+[""]*6
+            opt=lambda k:"" if p.get(k) is None else p[k]
+            base=[p["asin"],p["name"],p["noun"],p["category"],p["price"],opt("cost"),opt("fee_rate"),opt("cvr"),"|".join(p["features"]),kw] if i==0 else [p["asin"]]+[""]*9
             rows.append(base+[c["rank"],c["asin"],c.get("brand",""),c["title"],c["price"],c["rating"],c["reviews"],"|".join(c["bullets"])])
     return rows
 def template(fmt,products):
@@ -130,5 +134,5 @@ def template(fmt,products):
     for r in rows: ws.append(r)
     h=wb.create_sheet("说明"); h.append(["列名","说明"])
     for c in COLUMNS: h.append([c,HELP[c]])
-    h.append(["",""]); h.append(["规则","同一商品多行=多个竞品；商品字段只需在该商品第一行填写；只读取第一个工作表；竞品行的 name 留空（name 只代表我方商品），竞品品牌写在 comp_brand"])
+    h.append(["",""]); h.append(["规则","同一商品多行=多个竞品；商品字段只需在该商品第一行填写；只读取第一个工作表；竞品行的 name 留空（name 只代表我方商品），竞品品牌写在 comp_brand；cost/fee_rate/cvr 可留空，留空时广告估算用示例假设并在页面标明"])
     s=io.BytesIO(); wb.save(s); return s.getvalue(),"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"

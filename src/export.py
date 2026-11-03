@@ -31,4 +31,15 @@ def export(p,a,g,v):
     for r in ws3.iter_rows(min_row=2):
         for c in r[3:]:
             if "待验证" in str(c.value): c.fill=GREY
+    c=a.get("ad_calc")
+    if c:
+        ws3.append([]); ws3.append(["预算与出价参考（估算）"]); ws3.cell(ws3.max_row,1).font=Font(name=F,bold=True)
+        for i in c["inputs"]: ws3.append([i["label"],f'{i["value"]}{i["unit"]}' if i["unit"]!="$" else f'${i["value"]:.2f}',i["source"]])
+        if c.get("price_position"): ws3.append(["竞品价格对比",c["price_position"]["text"]])
+        ws3.append(["单件利润",f'${c["unit_profit"]:.2f}（利润率 {c["margin_pct"]}%）'])
+        if c["profitable"]:
+            for k,v in [("盈亏平衡 ACoS",f'{c["breakeven_acos_pct"]}%'),("目标 ACoS",f'{c["target_acos_pct"]}%'),("建议起步出价",f'${c["start_bid"]:.2f}'),
+                        ("建议最高出价",f'${c["max_bid"]:.2f}'),("建议日预算",f'${c["daily_budget"]:.2f}'),("预计日订单",f'{c["daily_orders"]} 单')]: ws3.append([k,v,"估算"])
+        else: ws3.append([c["message"],c["reason"]])
+        ws3.append(["说明",c["note"]])
     b=io.BytesIO(); wb.save(b); return b.getvalue()

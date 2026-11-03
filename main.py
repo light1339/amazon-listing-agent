@@ -5,7 +5,7 @@ from src.analyze import analyze
 from src.generate import generate,chain
 from src.export import export
 from src.validate import validate
-from src import db,upload,images
+from src import db,upload,images,adcalc
 import secrets,uuid,re,unicodedata
 Q_MAX=80
 NO_COMP="无竞品数据，请上传文件获得竞品分析"
@@ -81,7 +81,7 @@ class H(BaseHTTPRequestHandler):
             try: gid=int(q.get("generation_id",[""])[0]); rec=db.get_generation(gid)
             except Exception: rec=None
             if not rec: return self._send(404,{"error":"请先生成"})
-            p=rec.get("product") or prod(rec["asin"]); a=analyze(p)
+            p=rec.get("product") or prod(rec["asin"]); a=analyze(p); a["ad_calc"]=(rec["result"] or {}).get("ad_calc") or adcalc.calc(p,a)
             return self._send(200,export(p,a,rec["result"],rec["validation"]),"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",{"Content-Disposition":f'attachment; filename="listing_{p["asin"]}_{gid}.xlsx"'})
         self._send(404,{"error":"not found"})
     def do_POST(self):
@@ -120,6 +120,7 @@ class H(BaseHTTPRequestHandler):
                 if not forced and chain():
                     counted=db.reserve("gen",1,GEN_LIMIT); quota_out=not counted
                 r=generate(p,a,use_model=counted,prefer=None if mc=="auto" else mc,demo_reason="今日真实模型额度已用完" if quota_out else None); g,v=r["g"],r["v"]
+                ac=adcalc.calc(p,a); adcalc.apply_to_groups(g["ad_groups"],ac); g["ad_calc"]=ac; a={**a,"ad_calc":ac}  # 出价/预算由代码估算，不交给模型
                 if img_th:
                     img_th.join(); img={"images":box.get("images",[]),"errors":box.get("errors",["未知错误"])}
                     if not img["images"]: img_note="商品图生成失败，可重试"

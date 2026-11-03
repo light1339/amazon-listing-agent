@@ -480,7 +480,10 @@
      "rating": 4.2,
      "reviews": 58
     }
-   ]
+   ],
+   "cost": 8.5,
+   "fee_rate": 0.32,
+   "cvr": 0.12
   },
   {
    "asin": "B0DEMO9012",
@@ -915,7 +918,10 @@
      "rating": 4.2,
      "reviews": 74
     }
-   ]
+   ],
+   "cost": 11.0,
+   "fee_rate": 0.33,
+   "cvr": 0.08
   },
   {
    "asin": "B0DEMO7890",
