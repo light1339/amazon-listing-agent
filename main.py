@@ -120,7 +120,7 @@ class H(BaseHTTPRequestHandler):
                 if not forced and chain():
                     counted=db.reserve("gen",1,GEN_LIMIT); quota_out=not counted
                 r=generate(p,a,use_model=counted,prefer=None if mc=="auto" else mc,demo_reason="今日真实模型额度已用完" if quota_out else None); g,v=r["g"],r["v"]
-                ac=adcalc.calc(p,a); adcalc.apply_to_groups(g["ad_groups"],ac); g["ad_calc"]=ac; a={**a,"ad_calc":ac}  # 出价/预算由代码估算，不交给模型
+                ac=adcalc.calc(p,a); [(x.pop("suggested_bid",None),x.pop("budget_share",None)) for x in g["ad_groups"]]; g["ad_calc"]=ac; a={**a,"ad_calc":ac}  # 出价/预算只由代码估算（ad_calc），广告组不再带这两项
                 if img_th:
                     img_th.join(); img={"images":box.get("images",[]),"errors":box.get("errors",["未知错误"])}
                     if not img["images"]: img_note="商品图生成失败，可重试"

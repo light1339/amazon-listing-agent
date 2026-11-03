@@ -27,10 +27,7 @@ def export(p,a,g,v):
         if r[4].value.startswith("✘"):
             for c in r: c.font=Font(name=F,color="C00000",bold=True)
     ws3=wb.create_sheet("广告方案")
-    _sheet(ws3,["广告组","关键词","匹配方式","建议竞价","预算占比"],[[x["name"],", ".join(x["keywords"]),x["match_type"],x["suggested_bid"],x["budget_share"]] for x in g["ad_groups"]],[26,50,10,12,12])
-    for r in ws3.iter_rows(min_row=2):
-        for c in r[3:]:
-            if "待验证" in str(c.value): c.fill=GREY
+    _sheet(ws3,["广告组","关键词","匹配方式"],[[x.get("name",""),", ".join(x.get("keywords") or []),x.get("match_type","")] for x in g["ad_groups"]],[26,50,10])
     c=a.get("ad_calc")
     if c:
         ws3.append([]); ws3.append(["预算与出价参考（估算）"]); ws3.cell(ws3.max_row,1).font=Font(name=F,bold=True)
